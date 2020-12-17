@@ -1,8 +1,9 @@
-import { Styles } from "../src/lib";
+import { Styles } from '../src/lib'
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-};
+  actions: { argTypesRegex: '^on[A-Z].*' },
+  layout: 'centered'
+}
 
 export const decorators = [
   (Story) => (
@@ -10,5 +11,5 @@ export const decorators = [
       <Styles />
       <Story />
     </>
-  ),
-];
+  )
+]

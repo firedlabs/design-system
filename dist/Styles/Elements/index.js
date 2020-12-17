@@ -1,19 +1,21 @@
-"use strict";
+'use strict'
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, '__esModule', {
   value: true
-});
-exports.default = void 0;
+})
+exports.default = void 0
 
-var _react = _interopRequireDefault(require("react"));
+const _react = _interopRequireDefault(require('react'))
 
-var _Base = _interopRequireDefault(require("./Base"));
+const _Base = _interopRequireDefault(require('./Base'))
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj }
+}
 
-var Elements = function Elements() {
-  return /*#__PURE__*/_react.default.createElement(_Base.default, null);
-};
+const Elements = function Elements() {
+  return /* #__PURE__ */ _react.default.createElement(_Base.default, null)
+}
 
-var _default = Elements;
-exports.default = _default;
+const _default = Elements
+exports.default = _default

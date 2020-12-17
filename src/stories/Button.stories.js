@@ -6,4 +6,9 @@ export default {
   component: Button
 }
 
-export const Default = () => <Button>Oi</Button>
+const Template = (args) => <Button {...args} />
+
+export const Default = Template.bind({})
+Default.args = {
+  children: 'Matrícula 100% free'
+}
