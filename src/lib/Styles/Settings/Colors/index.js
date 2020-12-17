@@ -7,8 +7,9 @@ const Colors = createGlobalStyle`
     --color-third: #FFF;
 
     --color-black-first: #000;
-    --color-black-second: #3A4042;
-    --color-black-third: #828282;
+    --color-black-second: #1E1E1E
+    --color-black-third: #3A4042;
+    --color-black-fourth: #828282;
 
     --color-error: #BA1F33;
     --color-warning: #CEB02A;
