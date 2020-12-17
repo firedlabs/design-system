@@ -1,8 +1,9 @@
-import { Button } from "../components";
+import React from 'react'
+import { Button } from '../lib'
 
 export default {
-  title: "Components/Button",
-  component: Button,
-};
+  title: 'Components/Button',
+  component: Button
+}
 
-export const Default = () => <Button>Oi</Button>;
+export const Default = () => <Button>Oi</Button>
