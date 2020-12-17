@@ -4,7 +4,7 @@ import PressStart2P from './PressStart2P'
 
 const Fonts = createGlobalStyle`
     ${FiraCode.light};
-    ${FiraCode.bold};
+    ${FiraCode.medium};
     ${PressStart2P.regular};
 `
 
