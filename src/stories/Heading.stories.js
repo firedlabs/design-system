@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading } from '../lib/components'
+import { Heading } from '../lib'
 
 export default {
   title: 'Components/Heading',

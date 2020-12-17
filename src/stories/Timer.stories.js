@@ -1,5 +1,5 @@
 import React from 'react'
-import { Timer } from '../lib/components'
+import { Timer } from '../lib'
 
 export default {
   title: 'Components/Timer',
