@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { BoxShadow } from '../../Styles/Tools'
 
 const Box = styled.article`
+  box-sizing: border-box;
   ${BoxShadow.medium};
   width: 600px;
   height: 420px;
