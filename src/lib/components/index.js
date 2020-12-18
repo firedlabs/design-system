@@ -7,6 +7,7 @@ import Box from './Box'
 import Section from './Section'
 import ActionImage from './ActionImage'
 import Image from './Image'
+import Description from './Description'
 
 export {
   Button,
@@ -17,5 +18,6 @@ export {
   Box,
   Section,
   ActionImage,
-  Image
+  Image,
+  Description
 }
