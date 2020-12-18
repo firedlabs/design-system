@@ -12,7 +12,7 @@ var _Tools = require("../../Styles/Tools");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  ", ";\n  width: 600px;\n  height: 420px;\n  background-color: ", ";\n  border: 5px solid var(--color-third);\n  padding: var(--gap-medium);\n"]);
+  var data = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n  ", ";\n  width: 600px;\n  height: 420px;\n  background-color: ", ";\n  border: 5px solid var(--color-third);\n  padding: var(--gap-medium);\n"]);
 
   _templateObject = function _templateObject() {
     return data;

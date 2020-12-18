@@ -5,9 +5,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _index = require("../../Styles/Tools/index");
+var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _index = require("../../Styles/Tools/index");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25,5 +27,11 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 var Button = _styledComponents.default.button(_templateObject(), _index.Title, _index.BoxShadow.small);
 
+Button.defaultProps = {
+  children: 'Enviar'
+};
+Button.propTypes = {
+  children: _propTypes.default.string
+};
 var _default = Button;
 exports.default = _default;
