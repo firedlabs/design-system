@@ -9,7 +9,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _index = require("../../index");
+var _Timer = _interopRequireDefault(require("../Timer"));
 
 var _styles = require("./styles");
 
@@ -20,16 +20,16 @@ function Countdown(_ref) {
       hrs = _ref.hrs,
       min = _ref.min,
       seg = _ref.seg;
-  return /*#__PURE__*/_react.default.createElement(_styles.CountdownStyles, null, day && /*#__PURE__*/_react.default.createElement(_index.Timer, {
+  return /*#__PURE__*/_react.default.createElement(_styles.CountdownStyles, null, day && /*#__PURE__*/_react.default.createElement(_Timer.default, {
     label: day.label,
     time: day.time
-  }), hrs && /*#__PURE__*/_react.default.createElement(_index.Timer, {
+  }), hrs && /*#__PURE__*/_react.default.createElement(_Timer.default, {
     label: hrs.label,
     time: hrs.time
-  }), min && /*#__PURE__*/_react.default.createElement(_index.Timer, {
+  }), min && /*#__PURE__*/_react.default.createElement(_Timer.default, {
     label: min.label,
     time: min.time
-  }), seg && /*#__PURE__*/_react.default.createElement(_index.Timer, {
+  }), seg && /*#__PURE__*/_react.default.createElement(_Timer.default, {
     label: seg.label,
     time: seg.time
   }));

@@ -10,20 +10,18 @@ const Template = (args) => <Countdown {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-  day: {
-    label: 'Dias',
-    time: '01'
-  },
-  hrs: {
-    label: 'Hrs',
-    time: '20'
-  },
-  min: {
-    label: 'Min',
-    time: '10'
-  },
-  seg: {
-    label: 'Seg',
-    time: '10'
-  }
+  paramLastDate: '2021-2-7',
+  day: true,
+  hrs: true,
+  min: true,
+  sec: true
+}
+
+export const MinSec = Template.bind({})
+MinSec.args = {
+  paramLastDate: '2021-2-7',
+  day: false,
+  hrs: false,
+  min: true,
+  sec: true
 }

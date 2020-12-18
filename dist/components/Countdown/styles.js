@@ -12,7 +12,7 @@ var _styles = require("../Timer/styles");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n\n  & > ", ":not(:last-child) {\n    margin-right: var(--gap-big);\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: center;\n  align-items: center;\n\n  & > ", ":not(:last-child) {\n    margin-right: var(--gap-big);\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
