@@ -102,7 +102,12 @@ function Countdown(_ref) {
   }));
 }
 
-Countdown.defaultProps = {};
+Countdown.defaultProps = {
+  day: true,
+  hrs: true,
+  min: true,
+  sec: true
+};
 Countdown.propTypes = {
   paramLastDate: _propTypes.default.string.isRequired,
   day: _propTypes.default.bool,
