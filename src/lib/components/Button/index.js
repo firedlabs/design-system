@@ -1,5 +1,6 @@
-import { Title, BoxShadow } from '../../Styles/Tools/index'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import { Title, BoxShadow } from '../../Styles/Tools/index'
 
 const Button = styled.button`
   background-color: var(--color-first);
@@ -13,5 +14,13 @@ const Button = styled.button`
     transform: translateY(calc(var(--gap-smallest) * -1)) scale(1.05);
   }
 `
+
+Button.defaultProps = {
+  children: 'Enviar'
+}
+
+Button.propTypes = {
+  children: PropTypes.string
+}
 
 export default Button
