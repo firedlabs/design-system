@@ -58,7 +58,12 @@ function Countdown({ paramLastDate, day, hrs, min, sec }) {
   )
 }
 
-Countdown.defaultProps = {}
+Countdown.defaultProps = {
+  day: true,
+  hrs: true,
+  min: true,
+  sec: true
+}
 
 Countdown.propTypes = {
   paramLastDate: PropTypes.string.isRequired,
