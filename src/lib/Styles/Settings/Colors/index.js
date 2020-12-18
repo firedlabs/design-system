@@ -1,19 +1,20 @@
 import { createGlobalStyle } from 'styled-components'
+import { palette } from './palette'
 
 const Colors = createGlobalStyle`
   :root {
-    --color-first: #F25A70;
-    --color-second: #7C5E99;
-    --color-third: #FFF;
+    --color-first: ${palette.colorFirst};
+    --color-second: ${palette.colorSecond};
+    --color-third: ${palette.colorThird};
 
-    --color-black-first: #000;
-    --color-black-second: #1E1E1E
-    --color-black-third: #3A4042;
-    --color-black-fourth: #828282;
+    --color-black-first: ${palette.colorBlackFirst};
+    --color-black-second: ${palette.colorBlackSecond};
+    --color-black-third: ${palette.colorBlackThird};
+    --color-black-fourth: ${palette.colorBlackFourth};
 
-    --color-error: #BA1F33;
-    --color-warning: #CEB02A;
-    --color-success: #62C370;
+    --color-error: ${palette.colorError};
+    --color-warning: ${palette.colorWarning};
+    --color-success: ${palette.colorSuccess};
   }
 `
 
