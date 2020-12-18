@@ -5,5 +5,6 @@ import Heading from './Heading'
 import Icons from './Icons'
 import Box from './Box'
 import Section from './Section'
+import ActionImage from './ActionImage'
 
-export { Button, Title, Timer, Heading, Icons, Box, Section }
+export { Button, Title, Timer, Heading, Icons, Box, Section, ActionImage }
