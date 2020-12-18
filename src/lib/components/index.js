@@ -8,6 +8,7 @@ import Section from './Section'
 import ActionImage from './ActionImage'
 import Image from './Image'
 import Description from './Description'
+import Profile from './Profile'
 
 export {
   Button,
@@ -19,5 +20,6 @@ export {
   Section,
   ActionImage,
   Image,
-  Description
+  Description,
+  Profile
 }
