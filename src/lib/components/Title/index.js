@@ -3,7 +3,8 @@ import styled from 'styled-components'
 
 const Title = styled.h2`
   ${toolsTitle};
-  color: var(--color-third);
+  color: ${({ dark }) =>
+    dark ? 'var(--color-black-first)' : 'var(--color-third)'};
 `
 
 export default Title
