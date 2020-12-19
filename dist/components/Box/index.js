@@ -5,28 +5,44 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
+var _react = _interopRequireDefault(require("react"));
 
-var _Tools = require("../../Styles/Tools");
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _styles = require("./styles");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n  ", ";\n  width: 600px;\n  height: 420px;\n  background-color: ", ";\n  border: 5px solid var(--color-third);\n  padding: var(--gap-medium);\n"]);
+function Box(_ref) {
+  var light = _ref.light,
+      children = _ref.children,
+      src = _ref.src,
+      alt = _ref.alt;
+  var isImage = src && alt;
+  var isContent = !!children;
 
-  _templateObject = function _templateObject() {
-    return data;
+  var hasContent = function hasContent() {
+    return isContent && /*#__PURE__*/_react.default.createElement(_styles.Content, null, children);
   };
 
-  return data;
+  var hasImage = function hasImage() {
+    return isImage && /*#__PURE__*/_react.default.createElement(_styles.Image, {
+      src: src,
+      alt: alt
+    });
+  };
+
+  return /*#__PURE__*/_react.default.createElement(_styles.BoxStyles, {
+    light: light,
+    image: isImage
+  }, hasContent() || hasImage());
 }
 
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var Box = _styledComponents.default.article(_templateObject(), _Tools.BoxShadow.medium, function (_ref) {
-  var light = _ref.light;
-  return light ? 'var(--color-black-fourth)' : 'var(--color-black-second)';
-});
-
+Box.propTypes = {
+  light: _propTypes.default.bool,
+  children: _propTypes.default.string,
+  src: _propTypes.default.string,
+  alt: _propTypes.default.string
+};
 var _default = Box;
 exports.default = _default;
