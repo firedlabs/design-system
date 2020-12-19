@@ -7,4 +7,10 @@ export default {
   component: ActionImage
 }
 
-export const Default = () => <ActionImage image={alura} alt="Logo da Alura" />
+const Template = (args) => <ActionImage {...args} src={alura} />
+
+export const Default = Template.bind({})
+Default.args = {
+  href: 'https://alura.com.br',
+  alt: 'Logo da Alura'
+}

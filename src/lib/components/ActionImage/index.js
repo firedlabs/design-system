@@ -1,11 +1,19 @@
-import styled from 'styled-components'
-import { BoxShadow } from '../../Styles/Tools'
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Image, Action } from './styles'
 
-const ActionImage = styled.img.attrs(({ image, alt }) => ({
-  src: image,
-  alt
-}))`
-  ${BoxShadow.medium};
-`
+function ActionImage({ href, src, alt }) {
+  return (
+    <Action href={href}>
+      <Image src={src} alt={alt} />
+    </Action>
+  )
+}
+
+ActionImage.propTypes = {
+  href: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired
+}
 
 export default ActionImage
