@@ -8,7 +8,7 @@ exports.default = void 0;
 var _styledComponents = require("styled-components");
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  :root {\n    --gap-smallest: 10px;\n    --gap-small: 15px;\n    --gap-medium: 20px;\n    --gap-big: 40px;\n    --gap-biggest: 80px;  \n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  :root {\n    --gap-smallest: 1rem;\n    --gap-small: 1.5rem;\n    --gap-medium: 2rem;\n    --gap-big: 4rem;\n    --gap-biggest: 8rem;  \n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
