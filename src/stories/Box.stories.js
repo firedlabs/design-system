@@ -31,3 +31,10 @@ Image.args = {
 Image.parameters = {
   layout: 'centered'
 }
+
+export const Content = Template.bind({})
+Content.args = {
+  light: false,
+  children:
+    'Será uma semana de conteúdo com uma aula nova todos os dias, começando no dia 08/02/2021. As aula serão liberadas às 06:32 da madrugada na FiredLabs e terá plantão de dúvidas ao vivo às 17:33 na twitch.tv/marcobrunodev todos os dias durante a semana do curso.'
+}

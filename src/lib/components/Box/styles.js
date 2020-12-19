@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { BoxShadow } from '../../Styles/Tools'
+import { BoxShadow, Body1 } from '../../Styles/Tools'
 
 const hasImage = ({ image }) =>
   image &&
@@ -7,18 +7,30 @@ const hasImage = ({ image }) =>
     display: inline-flex;
     padding: 0;
   `
+export const Content = styled.p`
+  ${Body1};
+  color: var(--color-third);
+`
 
-export const Content = styled.p``
+const hasLight = ({ light }) =>
+  light &&
+  css`
+    background-color: var(--color-black-fourth);
+
+    & > ${Content} {
+      color: var(--color-black-first);
+    }
+  `
 
 export const Image = styled.img``
 
 export const BoxStyles = styled.article`
   box-sizing: border-box;
   ${BoxShadow.medium};
-  background-color: ${({ light }) =>
-    light ? 'var(--color-black-fourth)' : 'var(--color-black-second)'};
   border: 5px solid var(--color-third);
   padding: var(--gap-medium);
+  background-color: var(--color-black-second);
 
-  ${hasImage}
+  ${hasLight};
+  ${hasImage};
 `

@@ -1,10 +1,16 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Body1 } from '../../Styles/Tools'
+
+const hasDark = ({ dark }) =>
+  dark &&
+  css`
+    color: var(--color-black-first);
+  `
 
 const Description = styled.p`
   ${Body1};
-  color: ${({ dark }) =>
-    dark ? 'var(--color-black-first)' : 'var(--color-third)'};
+  color: var(--color-third);
+  ${hasDark};
 `
 
 export default Description
