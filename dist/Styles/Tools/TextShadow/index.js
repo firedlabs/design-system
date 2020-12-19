@@ -8,7 +8,7 @@ exports.TextShadow = void 0;
 var _styledComponents = require("styled-components");
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  text-shadow: 10px 10px 0px var(--color-black-first);\n"]);
+  var data = _taggedTemplateLiteral(["\n  text-shadow: 1rem 1rem 0px var(--color-black-first);\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -18,7 +18,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  text-shadow: 5px 5px 0px var(--color-black-first);\n"]);
+  var data = _taggedTemplateLiteral(["\n  text-shadow: 0.5rem 0.5rem 0px var(--color-black-first);\n"]);
 
   _templateObject = function _templateObject() {
     return data;
