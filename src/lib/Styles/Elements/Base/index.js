@@ -16,6 +16,10 @@ const Base = createGlobalStyle`
     @media(max-width: 430px) {
       font-size: 5px;
     }
+
+    @media(max-width: 360px) {
+      font-size: 4px;
+    }
   }
 `
 
