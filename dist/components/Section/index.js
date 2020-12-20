@@ -12,7 +12,7 @@ var _index = require("../../index");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n  width: 100%;\n  background-color: ", ";\n  border-bottom: 10px solid\n    ", ";\n  padding: var(--gap-medium);\n"]);
+  var data = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n  width: 100%;\n  background-color: ", ";\n  border-bottom: 10px solid\n    ", ";\n  padding: var(--gap-biggest) var(--gap-medium);\n"]);
 
   _templateObject = function _templateObject() {
     return data;
