@@ -1,5 +1,7 @@
 import styled from 'styled-components'
-import { Title, Image, Icons } from '../../index'
+import Icons from '../Icons'
+import Image from '../Image'
+import Title from '../Title'
 
 export const Action = styled.a`
   &:not(:last-child) {
@@ -16,6 +18,7 @@ export const ProfileStyle = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 
   & > ${Title} {
     color: var(--color-first);
@@ -26,6 +29,6 @@ export const ProfileStyle = styled.article`
   }
 
   & ${Icons} {
-    width: 60px;
+    width: 6rem;
   }
 `

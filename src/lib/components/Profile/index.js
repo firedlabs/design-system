@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Image, Title, Icons } from '../../index'
 import { Action, Nav, ProfileStyle } from './styles'
+import Title from '../Title'
+import Image from '../Image'
+import Icons from '../Icons'
 
 function Profile({ name, avatar, socialMedias }) {
   return (
