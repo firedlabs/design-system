@@ -1,6 +1,7 @@
 import React from 'react'
 import marco from './assets/marcobruno.png'
 import { Image, palette } from '../lib'
+import Wrapper from './components/Wrapper'
 
 export default {
   title: 'Components/Image',
@@ -12,11 +13,16 @@ export default {
         options: Object.keys(palette)
       }
     }
+  },
+  parameters: {
+    layout: 'padded'
   }
 }
 
 const Template = (args) => (
-  <Image src={marco} alt="Avatar do Marco Bruno" {...args} />
+  <Wrapper>
+    <Image src={marco} alt="Avatar do Marco Bruno" {...args} />
+  </Wrapper>
 )
 
 export const Default = Template.bind({})
