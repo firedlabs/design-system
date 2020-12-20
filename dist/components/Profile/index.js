@@ -9,9 +9,13 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _index = require("../../index");
-
 var _styles = require("./styles");
+
+var _Title = _interopRequireDefault(require("../Title"));
+
+var _Image = _interopRequireDefault(require("../Image"));
+
+var _Icons = _interopRequireDefault(require("../Icons"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19,7 +23,7 @@ function Profile(_ref) {
   var name = _ref.name,
       avatar = _ref.avatar,
       socialMedias = _ref.socialMedias;
-  return /*#__PURE__*/_react.default.createElement(_styles.ProfileStyle, null, /*#__PURE__*/_react.default.createElement(_index.Title, null, name), /*#__PURE__*/_react.default.createElement(_index.Image, {
+  return /*#__PURE__*/_react.default.createElement(_styles.ProfileStyle, null, /*#__PURE__*/_react.default.createElement(_Title.default, null, name), /*#__PURE__*/_react.default.createElement(_Image.default, {
     src: avatar,
     alt: name
   }), /*#__PURE__*/_react.default.createElement(_styles.Nav, null, socialMedias.map(function (_ref2) {
@@ -28,7 +32,7 @@ function Profile(_ref) {
     return /*#__PURE__*/_react.default.createElement(_styles.Action, {
       key: url,
       href: url
-    }, /*#__PURE__*/_react.default.createElement(_index.Icons, {
+    }, /*#__PURE__*/_react.default.createElement(_Icons.default, {
       name: name
     }));
   })));
