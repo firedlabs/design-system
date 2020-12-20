@@ -12,7 +12,7 @@ var _Tools = require("../../Styles/Tools");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  display: inline-block;\n  cursor: pointer;\n  ", ";\n\n  &:hover {\n    transform: scale(1.1);\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: inline-block;\n  cursor: pointer;\n  width: 20rem;\n  ", ";\n\n  &:hover {\n    transform: scale(1.1);\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -22,7 +22,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n"]);
 
   _templateObject = function _templateObject() {
     return data;

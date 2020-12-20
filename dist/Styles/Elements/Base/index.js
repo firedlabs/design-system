@@ -8,7 +8,7 @@ exports.default = void 0;
 var _styledComponents = require("styled-components");
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  html, body {\n    font-family: 'Fira Code', sans-serif;\n    font-size: 10px;\n\n    @media(max-width: 834px) {\n      font-size: 7px\n    }\n\n    @media(max-width: 510px) {\n      font-size: 6px;\n    }\n\n    @media(max-width: 430px) {\n      font-size: 5px;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  html, body {\n    font-family: 'Fira Code', sans-serif;\n    font-size: 10px;\n\n    @media(max-width: 834px) {\n      font-size: 7px\n    }\n\n    @media(max-width: 510px) {\n      font-size: 6px;\n    }\n\n    @media(max-width: 430px) {\n      font-size: 5px;\n    }\n\n    @media(max-width: 360px) {\n      font-size: 4px;\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
