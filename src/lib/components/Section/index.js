@@ -9,7 +9,7 @@ const Section = styled.section`
   border-bottom: 10px solid
     ${({ borderColor }) =>
       borderColor ? palette[borderColor] : 'var(--color-black-first)'};
-  padding: var(--gap-medium);
+  padding: var(--gap-biggest) var(--gap-medium);
 `
 
 export default Section
