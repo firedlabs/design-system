@@ -4,6 +4,7 @@ const Base = createGlobalStyle`
   html, body {
     font-family: 'Fira Code', sans-serif;
     font-size: 10px;
+    min-width: 290px;
 
     @media(max-width: 834px) {
       font-size: 7px
