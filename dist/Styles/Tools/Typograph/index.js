@@ -8,7 +8,7 @@ exports.Caption = exports.Body2 = exports.Body1 = exports.Subtitle = exports.Tit
 var _styledComponents = require("styled-components");
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  font-size: 1.8rem;\n  line-height: 2.4rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-size: max(1.8rem, 12px);\n  line-height: max(2.4rem, 18px);\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -18,7 +18,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  font-size: 2rem;\n  line-height: 2.6rem;\n  font-weight: 500;\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-size: max(2rem, 15px);\n  line-height: max(2.6rem, 20px);\n  font-weight: 500;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -28,7 +28,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  font-size: 3rem;\n  line-height: 4.2rem;\n  font-weight: 300;\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-size: max(3rem, 20px);\n  line-height: max(4.2rem, 28px);\n  font-weight: 300;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
