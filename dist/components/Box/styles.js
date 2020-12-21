@@ -46,7 +46,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  ", ";\n  color: var(--color-third);\n"]);
+  var data = _taggedTemplateLiteral(["\n  ", ";\n  color: var(--color-third);\n\n  & > strong {\n    font-weight: bold;\n  }\n\n  & > a {\n    color: var(--color-first);\n    font-weight: bold;\n    text-underline-offset: var(--gap-smallest);\n    text-decoration-thickness: 3px;\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
