@@ -42,4 +42,10 @@ export const ProfileStyle = styled.article`
       font-size: 26px;
     }
   }
+
+  @media (max-width: 320px) {
+    & > ${Title} {
+      font-size: 22px;
+    }
+  }
 `
