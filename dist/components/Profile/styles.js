@@ -16,7 +16,7 @@ var _Title = _interopRequireDefault(require("../Title"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n  max-width: 330px;\n\n  & > ", " {\n    color: var(--color-first);\n    font-size: 30px;\n  }\n\n  & > ", ", & > ", " {\n    margin-bottom: 10px;\n  }\n\n  & ", " {\n    width: 100%;\n  }\n\n  @media (max-width: 335px) {\n    & > ", " {\n      font-size: 26px;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n  max-width: 330px;\n\n  & > ", " {\n    color: var(--color-first);\n    font-size: 30px;\n  }\n\n  & > ", ", & > ", " {\n    margin-bottom: 10px;\n  }\n\n  & ", " {\n    width: 100%;\n  }\n\n  @media (max-width: 375px) {\n    & > ", " {\n      font-size: 26px;\n    }\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
