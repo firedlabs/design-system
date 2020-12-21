@@ -30,6 +30,10 @@ const hasLight = ({ light }) =>
 
     & > ${Content} {
       color: var(--color-black-first);
+
+      & > a {
+        color: var(--color-third);
+      }
     }
   `
 
