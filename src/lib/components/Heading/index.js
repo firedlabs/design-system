@@ -1,6 +1,12 @@
 import styled, { css } from 'styled-components'
 import { Heading as toolsHeading, TextShadow } from '../../Styles/Tools'
 
+const hasSmall = ({ small }) =>
+  small &&
+  css`
+    margin-bottom: var(--gap-small);
+  `
+
 const hasMedium = ({ medium }) =>
   medium &&
   css`
@@ -24,8 +30,9 @@ const Heading = styled.h1`
   color: var(--color-third);
   ${TextShadow.small};
   text-align: center;
-  margin-bottom: var(--gap-small);
+  margin-bottom: var(--gap-smallest);
 
+  ${hasSmall};
   ${hasMedium};
   ${hasBig};
   ${hasBiggest};
