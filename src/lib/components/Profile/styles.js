@@ -37,7 +37,7 @@ export const ProfileStyle = styled.article`
     width: 100%;
   }
 
-  @media (max-width: 335px) {
+  @media (max-width: 365px) {
     & > ${Title} {
       font-size: 26px;
     }
