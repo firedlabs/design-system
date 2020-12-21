@@ -4,7 +4,10 @@ import marco from './assets/marcobruno.png'
 
 export default {
   title: 'Components/Profile',
-  component: Profile
+  component: Profile,
+  parameters: {
+    layout: 'padded'
+  }
 }
 
 const Template = (args) => <Profile avatar={marco} {...args} />

@@ -4,13 +4,16 @@ import Image from '../Image'
 import Title from '../Title'
 
 export const Action = styled.a`
+  width: 18.2%;
+
   &:not(:last-child) {
-    margin-right: var(--gap-big);
+    margin-right: 40px;
   }
 `
 
 export const Nav = styled.nav`
   display: flex;
+  justify-content: center;
   align-items: center;
 `
 
@@ -19,16 +22,24 @@ export const ProfileStyle = styled.article`
   flex-direction: column;
   align-items: center;
   width: 100%;
+  max-width: 330px;
 
   & > ${Title} {
     color: var(--color-first);
+    font-size: 30px;
   }
 
   & > ${Title}, & > ${Image} {
-    margin-bottom: var(--gap-smallest);
+    margin-bottom: 10px;
   }
 
   & ${Icons} {
-    width: 6rem;
+    width: 100%;
+  }
+
+  @media (max-width: 335px) {
+    & > ${Title} {
+      font-size: 26px;
+    }
   }
 `
