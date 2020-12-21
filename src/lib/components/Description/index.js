@@ -20,7 +20,7 @@ const Description = styled.p`
     color: var(--color-first);
     font-weight: bold;
     text-underline-offset: var(--gap-smallest);
-    text-decoration-thickness: 4px;
+    text-decoration-thickness: 3px;
   }
 `
 
