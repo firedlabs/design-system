@@ -7,9 +7,18 @@ export default {
 }
 
 const Template = (args) => <Description {...args} />
+const children = (
+  <>
+    Será uma semana de conteúdo com uma aula nova todos os dias, começando no
+    dia <strong>08/02/2021</strong>. As aula serão liberadas às{' '}
+    <strong>06:32</strong> da madrugada na FiredLabs e terá plantão de dúvidas
+    ao vivo às <strong>17:33</strong> na{' '}
+    <a href="https://twitch.tv/marcobrunodev">twitch.tv/marcobrunodev</a> todos
+    os dias durante a semana do curso.
+  </>
+)
 
 export const Default = Template.bind({})
 Default.args = {
-  children:
-    'Hoje, instrutor e desenvolvedor FrontEnd/UX pela CollabCode, Marco já trabalhou nas mais diversas áreas. Foi palhaço, entrou na área de TI como desenvolvedor HMI/PLC e gosta de ir descobrindo seu caminho conforme o percorre. Marco também tem uma crescente presença em comunidades de UX e Front-end, trabalhando para uní-las, palestra em empresas e eventos como o WebBR, escreve em diversos blogs como o da Caelum, o Pinceladas da Web e seu Medium, quando não está jogando Airsoft ou trocando ideias com amigos.'
+  children
 }
