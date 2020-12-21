@@ -16,7 +16,7 @@ var _Title = _interopRequireDefault(require("../Title"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n\n  & > ", " {\n    color: var(--color-first);\n  }\n\n  & > ", ", & > ", " {\n    margin-bottom: var(--gap-smallest);\n  }\n\n  & ", " {\n    width: 6rem;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n  max-width: 330px;\n\n  & > ", " {\n    color: var(--color-first);\n    font-size: 30px;\n  }\n\n  & > ", ", & > ", " {\n    margin-bottom: 10px;\n  }\n\n  & ", " {\n    width: 100%;\n  }\n\n  @media (max-width: 335px) {\n    & > ", " {\n      font-size: 26px;\n    }\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -26,7 +26,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: center;\n  align-items: center;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -36,7 +36,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  &:not(:last-child) {\n    margin-right: var(--gap-big);\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 18.2%;\n\n  &:not(:last-child) {\n    margin-right: 40px;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -55,6 +55,6 @@ var Nav = _styledComponents.default.nav(_templateObject2());
 
 exports.Nav = Nav;
 
-var ProfileStyle = _styledComponents.default.article(_templateObject3(), _Title.default, _Title.default, _Image.default, _Icons.default);
+var ProfileStyle = _styledComponents.default.article(_templateObject3(), _Title.default, _Title.default, _Image.default, _Icons.default, _Title.default);
 
 exports.ProfileStyle = ProfileStyle;
