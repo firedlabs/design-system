@@ -10,6 +10,7 @@ import Image from './Image'
 import Description from './Description'
 import Profile from './Profile'
 import Countdown from './Countdown'
+import FiredLabs from './FiredLabs'
 
 export {
   Button,
@@ -23,5 +24,6 @@ export {
   Image,
   Description,
   Profile,
-  Countdown
+  Countdown,
+  FiredLabs
 }
