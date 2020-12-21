@@ -18,18 +18,18 @@ export const Subtitle = css`
 `
 
 export const Body1 = css`
-  font-size: 3rem;
-  line-height: 4.2rem;
+  font-size: max(3rem, 20px);
+  line-height: max(4.2rem, 28px);
   font-weight: 300;
 `
 
 export const Body2 = css`
-  font-size: 2rem;
-  line-height: 2.6rem;
+  font-size: max(2rem, 15px);
+  line-height: max(2.6rem, 20px);
   font-weight: 500;
 `
 
 export const Caption = css`
-  font-size: 1.8rem;
-  line-height: 2.4rem;
+  font-size: max(1.8rem, 12px);
+  line-height: max(2.4rem, 18px);
 `
