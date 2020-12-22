@@ -9,6 +9,10 @@ export const Action = styled.a`
   &:not(:last-child) {
     margin-right: 40px;
   }
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `
 
 export const Nav = styled.nav`
