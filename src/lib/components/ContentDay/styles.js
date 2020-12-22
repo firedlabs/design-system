@@ -29,13 +29,16 @@ export const Goal = styled.dd`
 `
 
 export const Title = styled.dt`
+  display: flex;
+  align-items: center;
   background-color: var(--color-third);
   ${toolsTitle};
   position: absolute;
   z-index: -1;
   top: 0;
   transform: translateY(-100%);
-  padding: var(--gap-small);
+  padding: 0 var(--gap-small);
+  height: var(--height-title);
   color: var(--color-black-first);
   ${BoxShadow.medium};
 `
@@ -52,12 +55,15 @@ const changeColor = ({ color, fontColor }) =>
   `
 
 export const ContentDayStyle = styled(BoxStyles)`
+  --height-title: 60px;
+
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: var(--color-third);
   padding: 0;
+  margin-top: var(--height-title);
 
   ${changeColor};
 `
