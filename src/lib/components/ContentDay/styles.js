@@ -16,17 +16,22 @@ export const WrapperOptions = styled.div`
   flex-wrap: wrap;
 `
 
+export const LabelGoal = styled.strong`
+  ${Subtitle};
+  font-weight: bold;
+  display: block;
+  margin-bottom: var(--gap-small);
+`
+
 export const Goal = styled.dd`
   ${Body1};
   padding: var(--gap-medium);
   border-top: 0.5rem solid var(--color-third);
   z-index: 1;
+  align-items: stretch;
 
   & > strong {
-    ${Subtitle};
     font-weight: bold;
-    display: block;
-    margin-bottom: var(--gap-small);
   }
 `
 
@@ -37,7 +42,8 @@ export const Title = styled.dt`
   ${toolsTitle};
   position: absolute;
   top: 0;
-  transform: translateY(-100%);
+  left: 50%;
+  transform: translateY(-100%) translateX(-50%);
   padding: 0 var(--gap-small);
   height: var(--height-title);
   color: var(--color-black-first);
@@ -65,7 +71,8 @@ export const ContentDayStyle = styled(BoxStyles)`
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
+  justify-content: space-between;
   color: var(--color-third);
   border-top: 0;
   padding: 0;

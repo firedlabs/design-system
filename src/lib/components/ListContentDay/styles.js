@@ -14,7 +14,6 @@ const ListContentDayStyle = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: stretch;
 
   & > ${ContentDayStyle} {
     width: calc(50% - var(--gap-biggest) / 2);

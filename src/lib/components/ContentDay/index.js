@@ -1,6 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ContentDayStyle, Title, Goal, WrapperOptions } from './styles'
+import {
+  ContentDayStyle,
+  Title,
+  Goal,
+  WrapperOptions,
+  LabelGoal
+} from './styles'
 import Option from './Option'
 
 function ContentDay({ title, goal, options, color, fontColor }) {
@@ -23,7 +29,7 @@ function ContentDay({ title, goal, options, color, fontColor }) {
     <ContentDayStyle color={color} fontColor={fontColor}>
       <Title>{title}</Title>
       <Goal>
-        <strong>Objetivo:</strong>
+        <LabelGoal>Objetivo:</LabelGoal>
         {goal}
       </Goal>
       <WrapperOptions>{hasOptions()}</WrapperOptions>
