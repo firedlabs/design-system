@@ -1,5 +1,5 @@
 import React from 'react'
-import { ListContentDay } from '../lib'
+import { ListContentDay, Container } from '../lib'
 
 export default {
   title: 'Components/ListContentDay',
@@ -116,8 +116,61 @@ ThreeDays.args = {
   ]
 }
 
-export const FourDay = Template.bind({})
-FourDay.args = {
+export const ThreeDaysToUseContainer = (args) => (
+  <Container>{Template.bind({})(args)}</Container>
+)
+ThreeDaysToUseContainer.args = {
+  days: [
+    {
+      title: 'Aula 00',
+      goal:
+        'Entender como funcionarão as aulas, onde tirar as dúvidas e o que você precisa instalar na sua máquina.',
+      options: [
+        {
+          label: 'Qtd. Videos',
+          description: '7'
+        },
+        {
+          label: 'Liberar Acesso',
+          description: 'Matrícula'
+        }
+      ]
+    },
+    {
+      title: 'Aula 01',
+      goal:
+        'Entender como funcionarão as aulas, onde tirar as dúvidas e o que você precisa instalar na sua máquina.',
+      options: [
+        {
+          label: 'Qtd. Videos',
+          description: '7'
+        },
+        {
+          label: 'Liberar Acesso',
+          description: 'Matrícula'
+        }
+      ]
+    },
+    {
+      title: 'Aula 02',
+      goal:
+        'Entender como funcionarão as aulas, onde tirar as dúvidas e o que você precisa instalar na sua máquina.',
+      options: [
+        {
+          label: 'Qtd. Videos',
+          description: '7'
+        },
+        {
+          label: 'Liberar Acesso',
+          description: 'Matrícula'
+        }
+      ]
+    }
+  ]
+}
+
+export const FourDays = Template.bind({})
+FourDays.args = {
   days: [
     {
       title: 'Aula 00',
