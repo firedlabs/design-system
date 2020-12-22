@@ -36,7 +36,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 18.2%;\n\n  &:not(:last-child) {\n    margin-right: 40px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 18.2%;\n\n  &:not(:last-child) {\n    margin-right: 40px;\n  }\n\n  &:hover {\n    transform: scale(1.1);\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;

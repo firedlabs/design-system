@@ -89,7 +89,7 @@ function Countdown(_ref) {
   });
   return /*#__PURE__*/_react.default.createElement(_styles.CountdownStyles, null, day && /*#__PURE__*/_react.default.createElement(_Timer.default, {
     label: "Dias",
-    time: timeLeft.day || '--'
+    time: timeLeft.day
   }), hrs && /*#__PURE__*/_react.default.createElement(_Timer.default, {
     label: "Hrs",
     time: timeLeft.hrs
