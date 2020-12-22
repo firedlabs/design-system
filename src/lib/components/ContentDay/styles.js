@@ -60,7 +60,7 @@ const changeColor = ({ color, fontColor }) =>
   `
 
 export const ContentDayStyle = styled(BoxStyles)`
-  --height-title: 60px;
+  --height-title: 6rem;
 
   position: relative;
   display: flex;
