@@ -42,3 +42,16 @@ Object.keys(_TextShadow).forEach(function (key) {
     }
   });
 });
+
+var _Frame = require("./Frame");
+
+Object.keys(_Frame).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _Frame[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _Frame[key];
+    }
+  });
+});
