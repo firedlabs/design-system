@@ -50,7 +50,7 @@ function Countdown({ paramLastDate, day, hrs, min, sec }) {
 
   return (
     <CountdownStyles>
-      {day && <Timer label="Dias" time={timeLeft.day || '--'} />}
+      {day && <Timer label="Dias" time={timeLeft.day} />}
       {hrs && <Timer label="Hrs" time={timeLeft.hrs} />}
       {min && <Timer label="Min" time={timeLeft.min} />}
       {sec && <Timer label="Seg" time={timeLeft.sec} />}
