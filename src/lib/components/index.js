@@ -28,6 +28,6 @@ export {
   Profile,
   Countdown,
   FiredLabs,
-  ContentDay
+  ContentDay,
   ListContentDay
 }
