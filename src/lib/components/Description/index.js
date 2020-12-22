@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { Body1 } from '../../Styles/Tools'
+import { Body1, Link } from '../../Styles/Tools'
 
 const hasDark = ({ dark }) =>
   dark &&
@@ -17,10 +17,7 @@ const Description = styled.p`
   }
 
   & > a {
-    color: var(--color-first);
-    font-weight: bold;
-    text-underline-offset: var(--gap-smallest);
-    text-decoration-thickness: 3px;
+    ${Link}
   }
 `
 

@@ -34,3 +34,10 @@ export const Caption = css`
   font-size: max(1.8rem, 12px);
   line-height: max(2.4rem, 18px);
 `
+
+export const Link = css`
+  color: var(--color-first);
+  font-weight: bold;
+  text-underline-offset: 0.4em;
+  text-decoration-thickness: 0.1em;
+`

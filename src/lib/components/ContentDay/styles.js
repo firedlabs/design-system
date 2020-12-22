@@ -4,7 +4,8 @@ import {
   Body1,
   Subtitle,
   Title as toolsTitle,
-  BoxShadow
+  BoxShadow,
+  Link
 } from '../../Styles/Tools'
 import { BoxStyles } from '../Box/styles'
 
@@ -32,6 +33,10 @@ export const Goal = styled.dd`
 
   & > strong {
     font-weight: bold;
+  }
+
+  & > a {
+    ${Link};
   }
 `
 
