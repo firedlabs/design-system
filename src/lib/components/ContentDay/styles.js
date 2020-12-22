@@ -19,6 +19,8 @@ export const WrapperOptions = styled.div`
 export const Goal = styled.dd`
   ${Body1};
   padding: var(--gap-medium);
+  border-top: 0.5rem solid var(--color-third);
+  z-index: 1;
 
   & > strong {
     ${Subtitle};
@@ -34,7 +36,6 @@ export const Title = styled.dt`
   background-color: var(--color-third);
   ${toolsTitle};
   position: absolute;
-  z-index: -1;
   top: 0;
   transform: translateY(-100%);
   padding: 0 var(--gap-small);
@@ -52,6 +53,10 @@ const changeColor = ({ color, fontColor }) =>
       color: ${palette[fontColor]};
       background-color: ${palette[color]};
     }
+
+    & > ${Goal} {
+      border-color: ${palette[color]};
+    }
   `
 
 export const ContentDayStyle = styled(BoxStyles)`
@@ -62,6 +67,7 @@ export const ContentDayStyle = styled(BoxStyles)`
   flex-direction: column;
   align-items: center;
   color: var(--color-third);
+  border-top: 0;
   padding: 0;
   margin-top: var(--height-title);
 

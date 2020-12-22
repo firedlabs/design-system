@@ -1,5 +1,5 @@
 import React from 'react'
-import ListContentDay from '../lib/components/ListContentDay'
+import { ListContentDay } from '../lib'
 
 export default {
   title: 'Components/ListContentDay',
