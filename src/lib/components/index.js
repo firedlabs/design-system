@@ -11,6 +11,7 @@ import Description from './Description'
 import Profile from './Profile'
 import Countdown from './Countdown'
 import FiredLabs from './FiredLabs'
+import ContentDay from './ContentDay'
 
 export {
   Button,
@@ -25,5 +26,6 @@ export {
   Description,
   Profile,
   Countdown,
-  FiredLabs
+  FiredLabs,
+  ContentDay
 }

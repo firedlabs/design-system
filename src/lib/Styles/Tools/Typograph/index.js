@@ -11,6 +11,7 @@ export const Title = css`
   font-size: 3rem;
   line-height: 3.5rem;
 `
+
 export const Subtitle = css`
   font-family: 'Press Start 2P', sans-serif;
   font-size: 2.5rem;
