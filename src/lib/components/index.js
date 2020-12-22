@@ -14,6 +14,7 @@ import FiredLabs from './FiredLabs'
 import ContentDay from './ContentDay'
 import ListContentDay from './ListContentDay'
 import Action from './Action'
+import Container from './Container'
 
 export {
   Button,
@@ -31,5 +32,6 @@ export {
   FiredLabs,
   ContentDay,
   ListContentDay,
-  Action
+  Action,
+  Container
 }
