@@ -12,6 +12,7 @@ import Profile from './Profile'
 import Countdown from './Countdown'
 import FiredLabs from './FiredLabs'
 import ContentDay from './ContentDay'
+import ListContentDay from './ListContentDay'
 
 export {
   Button,
@@ -28,4 +29,5 @@ export {
   Countdown,
   FiredLabs,
   ContentDay
+  ListContentDay
 }
