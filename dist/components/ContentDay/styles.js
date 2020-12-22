@@ -20,7 +20,7 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  --height-title: 60px;\n\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  color: var(--color-third);\n  border-top: 0;\n  padding: 0;\n  margin-top: var(--height-title);\n\n  ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  --height-title: 6rem;\n\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  color: var(--color-third);\n  border-top: 0;\n  padding: 0;\n  margin-top: var(--height-title);\n\n  ", ";\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
