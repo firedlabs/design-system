@@ -38,7 +38,7 @@ function ContentDay(_ref) {
   return /*#__PURE__*/_react.default.createElement(_styles.ContentDayStyle, {
     color: color,
     fontColor: fontColor
-  }, /*#__PURE__*/_react.default.createElement(_styles.Title, null, title), /*#__PURE__*/_react.default.createElement(_styles.Goal, null, /*#__PURE__*/_react.default.createElement("strong", null, "Objetivo:"), goal), /*#__PURE__*/_react.default.createElement(_styles.WrapperOptions, null, hasOptions()));
+  }, /*#__PURE__*/_react.default.createElement(_styles.Title, null, title), /*#__PURE__*/_react.default.createElement(_styles.Goal, null, /*#__PURE__*/_react.default.createElement(_styles.LabelGoal, null, "Objetivo:"), goal), /*#__PURE__*/_react.default.createElement(_styles.WrapperOptions, null, hasOptions()));
 }
 
 ContentDay.defaultProps = {
