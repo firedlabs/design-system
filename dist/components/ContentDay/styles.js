@@ -20,7 +20,7 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  --height-title: 60px;\n\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  color: var(--color-third);\n  padding: 0;\n  margin-top: var(--height-title);\n\n  ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  --height-title: 60px;\n\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  color: var(--color-third);\n  border-top: 0;\n  padding: 0;\n  margin-top: var(--height-title);\n\n  ", ";\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -30,7 +30,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    border-color: ", ";\n\n    & > ", " {\n      color: ", ";\n      background-color: ", ";\n    }\n  "]);
+  var data = _taggedTemplateLiteral(["\n    border-color: ", ";\n\n    & > ", " {\n      color: ", ";\n      background-color: ", ";\n    }\n\n    & > ", " {\n      border-color: ", ";\n    }\n  "]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -40,7 +40,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  background-color: var(--color-third);\n  ", ";\n  position: absolute;\n  z-index: -1;\n  top: 0;\n  transform: translateY(-100%);\n  padding: 0 var(--gap-small);\n  height: var(--height-title);\n  color: var(--color-black-first);\n  ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  background-color: var(--color-third);\n  ", ";\n  position: absolute;\n  top: 0;\n  transform: translateY(-100%);\n  padding: 0 var(--gap-small);\n  height: var(--height-title);\n  color: var(--color-black-first);\n  ", ";\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -50,7 +50,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  ", ";\n  padding: var(--gap-medium);\n\n  & > strong {\n    ", ";\n    font-weight: bold;\n    display: block;\n    margin-bottom: var(--gap-small);\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  ", ";\n  padding: var(--gap-medium);\n  border-top: 0.5rem solid var(--color-third);\n  z-index: 1;\n\n  & > strong {\n    ", ";\n    font-weight: bold;\n    display: block;\n    margin-bottom: var(--gap-small);\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -86,7 +86,7 @@ exports.Title = Title;
 var changeColor = function changeColor(_ref) {
   var color = _ref.color,
       fontColor = _ref.fontColor;
-  return color && (0, _styledComponents.css)(_templateObject4(), _palette.palette[color], Title, _palette.palette[fontColor], _palette.palette[color]);
+  return color && (0, _styledComponents.css)(_templateObject4(), _palette.palette[color], Title, _palette.palette[fontColor], _palette.palette[color], Goal, _palette.palette[color]);
 };
 
 var ContentDayStyle = (0, _styledComponents.default)(_styles.BoxStyles)(_templateObject5(), changeColor);
