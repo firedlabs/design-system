@@ -45,7 +45,7 @@ export const BoxStyles = styled.article`
   box-sizing: border-box;
   width: 100%;
   ${BoxShadow.medium};
-  border: 5px solid var(--color-third);
+  border: 0.5rem solid var(--color-third);
   padding: var(--gap-medium);
   background-color: var(--color-black-second);
 

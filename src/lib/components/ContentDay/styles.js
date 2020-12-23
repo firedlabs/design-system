@@ -30,6 +30,7 @@ export const Goal = styled.dd`
   border-top: 0.5rem solid var(--color-third);
   z-index: 1;
   align-items: stretch;
+  background-color: inherit;
 
   & > strong {
     font-weight: bold;

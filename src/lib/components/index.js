@@ -15,6 +15,8 @@ import ContentDay from './ContentDay'
 import ListContentDay from './ListContentDay'
 import Action from './Action'
 import Container from './Container'
+import Modal from './Modal'
+import Line from './Line'
 
 export {
   Button,
@@ -33,5 +35,7 @@ export {
   ContentDay,
   ListContentDay,
   Action,
-  Container
+  Container,
+  Modal,
+  Line
 }
