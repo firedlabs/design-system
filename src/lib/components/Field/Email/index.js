@@ -11,8 +11,12 @@ function Email({ label }) {
   )
 }
 
+Email.defaultProps = {
+  label: 'Email'
+}
+
 Email.propTypes = {
-  label: PropTypes.string.isRequired
+  label: PropTypes.string
 }
 
 export default Email

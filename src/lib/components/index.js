@@ -17,6 +17,7 @@ import Action from './Action'
 import Container from './Container'
 import Modal from './Modal'
 import Line from './Line'
+import Field from './Field'
 
 export {
   Button,
@@ -37,5 +38,6 @@ export {
   Action,
   Container,
   Modal,
-  Line
+  Line,
+  Field
 }

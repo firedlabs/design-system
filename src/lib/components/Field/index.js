@@ -1,5 +1,7 @@
 import Email from './Email'
 
-export const Field = {
+const Field = {
   Email
 }
+
+export default Field
