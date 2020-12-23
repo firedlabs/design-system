@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { transparentize } from 'polished'
 import { palette } from '../../Styles/Settings/Colors/palette'
 import Action from '../Action'
@@ -12,7 +12,16 @@ export const Box = styled(BoxStyles)`
   max-width: 900px;
 `
 
+const isOpen = ({ active }) =>
+  active &&
+  css`
+    transform: scale(1);
+  `
+
 export const ModalStyle = styled.article`
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,6 +32,9 @@ export const ModalStyle = styled.article`
   width: 100vw;
   height: 100vh;
   padding: var(--gap-medium);
+  transform-origin: center center;
+  transform: scale(0);
+  transition: transform 400ms ease-in-out;
 
   & > ${Action} {
     ${Body2};
@@ -35,4 +47,6 @@ export const ModalStyle = styled.article`
       transform: translateY(-0.5rem) scale(1.1);
     }
   }
+
+  ${isOpen}
 `

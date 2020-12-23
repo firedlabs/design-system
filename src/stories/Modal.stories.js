@@ -1,6 +1,7 @@
 import React from 'react'
 import { Modal, Button, Line } from '../lib'
 import { Field } from '../lib/components/Field'
+import Wrapper from './components/Wrapper'
 
 export default {
   title: 'Components/Modal',
@@ -28,5 +29,6 @@ const children = (
 export const Default = Template.bind({})
 Default.args = {
   title: 'Confirme sua matrícula',
-  children
+  children,
+  active: true
 }
