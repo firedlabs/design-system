@@ -21,8 +21,11 @@ function Email(_ref) {
   }));
 }
 
+Email.defaultProps = {
+  label: 'Email'
+};
 Email.propTypes = {
-  label: _propTypes.default.string.isRequired
+  label: _propTypes.default.string
 };
 var _default = Email;
 exports.default = _default;
