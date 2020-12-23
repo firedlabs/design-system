@@ -5,24 +5,38 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
-
-var _propTypes = _interopRequireDefault(require("prop-types"));
+exports.ModalStyle = exports.Box = void 0;
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
+var _polished = require("polished");
+
 var _palette = require("../../Styles/Settings/Colors/palette");
 
-var _index = require("../../Styles/Tools/index");
+var _Action = _interopRequireDefault(require("../Action"));
+
+var _Tools = require("../../Styles/Tools");
+
+var _styles = require("../Box/styles");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n  position: fixed;\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  box-sizing: border-box;\n  background-color: ", ";\n  border: 1rem solid var(--color-black-first);\n  width: 100vw;\n  height: 100vh;\n  padding: var(--gap-medium);\n  transform-origin: center center;\n  transform: scale(0);\n  transition: transform 400ms ease-in-out;\n\n  & > ", " {\n    ", ";\n    cursor: pointer;\n    color: var(--color-third);\n    background-color: var(--color-black-fourth);\n    padding: var(--gap-smallest);\n\n    &:hover {\n      transform: translateY(-0.5rem) scale(1.1);\n    }\n  }\n\n  ", "\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  background-color: var(--color-first);\n  ", ";\n  padding: var(--gap-medium);\n  color: var(--color-third);\n  ", ";\n  cursor: pointer;\n\n  &:hover {\n    transform: translateY(calc(var(--gap-smallest) * -1)) scale(1.05);\n  }\n\n  ", "\n"]);
+  var data = _taggedTemplateLiteral(["\n    transform: scale(1);\n  "]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -32,7 +46,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  color: ", ";\n  background-color: ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  margin-bottom: var(--gap-medium);\n  max-width: 900px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -43,19 +57,14 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var changeColor = function changeColor(_ref) {
-  var color = _ref.color,
-      backgroundColor = _ref.backgroundColor;
-  return (0, _styledComponents.css)(_templateObject(), _palette.palette[color], _palette.palette[backgroundColor]);
+var Box = (0, _styledComponents.default)(_styles.BoxStyles)(_templateObject());
+exports.Box = Box;
+
+var isOpen = function isOpen(_ref) {
+  var active = _ref.active;
+  return active && (0, _styledComponents.css)(_templateObject2());
 };
 
-var Button = _styledComponents.default.button(_templateObject2(), _index.Title, _index.BoxShadow.small, changeColor);
+var ModalStyle = _styledComponents.default.article(_templateObject3(), (0, _polished.transparentize)(0.05, _palette.palette.colorSecond), _Action.default, _Tools.Body2, isOpen);
 
-Button.defaultProps = {
-  children: 'Enviar'
-};
-Button.propTypes = {
-  children: _propTypes.default.string
-};
-var _default = Button;
-exports.default = _default;
+exports.ModalStyle = ModalStyle;

@@ -50,7 +50,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  ", ";\n  padding: var(--gap-medium);\n  border-top: 0.5rem solid var(--color-third);\n  z-index: 1;\n  align-items: stretch;\n\n  & > strong {\n    font-weight: bold;\n  }\n\n  & > a {\n    ", ";\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  ", ";\n  padding: var(--gap-medium);\n  border-top: 0.5rem solid var(--color-third);\n  z-index: 1;\n  align-items: stretch;\n  background-color: inherit;\n\n  & > strong {\n    font-weight: bold;\n  }\n\n  & > a {\n    ", ";\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
