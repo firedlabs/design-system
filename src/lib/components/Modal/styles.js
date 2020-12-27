@@ -16,6 +16,7 @@ const isOpen = ({ active }) =>
   active &&
   css`
     transform: scale(1);
+    opacity: 1;
   `
 
 export const ModalStyle = styled.section`
@@ -35,7 +36,8 @@ export const ModalStyle = styled.section`
   padding: var(--gap-medium);
   transform-origin: center center;
   transform: scale(0);
-  transition: transform 400ms ease-in-out;
+  opacity: 0;
+  transition: transform 400ms ease-in-out, opacity 300ms ease-in-out;
 
   & > ${Action} {
     ${Body2};
