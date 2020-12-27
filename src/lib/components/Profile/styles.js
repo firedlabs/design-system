@@ -26,15 +26,22 @@ export const ProfileStyle = styled.article`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 330px;
+  max-width: 340px;
 
   & > ${Title} {
+    text-align: center;
     color: var(--color-first);
     font-size: 30px;
+    width: 100%;
+    transform: translateX(2px);
   }
 
   & > ${Title}, & > ${Image} {
     margin-bottom: 10px;
+  }
+
+  & > ${Image} {
+    max-width: 330px;
   }
 
   & ${Icons} {
