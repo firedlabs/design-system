@@ -23,14 +23,16 @@ function ListActionImage(_ref) {
     var href = _ref2.href,
         src = _ref2.src,
         alt = _ref2.alt,
-        isPadding = _ref2.isPadding;
+        isPadding = _ref2.isPadding,
+        backgroundColor = _ref2.backgroundColor;
     return /*#__PURE__*/_react.default.createElement(_ActionImage.default, {
       key: href,
       src: src,
       alt: alt,
       href: href,
       size: size,
-      isPadding: isPadding
+      isPadding: isPadding,
+      backgroundColor: backgroundColor
     });
   }));
 }
