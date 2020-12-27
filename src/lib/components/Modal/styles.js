@@ -22,6 +22,7 @@ export const ModalStyle = styled.section`
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   z-index: 100;
   display: flex;
   flex-direction: column;
@@ -30,7 +31,6 @@ export const ModalStyle = styled.section`
   box-sizing: border-box;
   background-color: ${transparentize(0.05, palette.colorSecond)};
   border: 1rem solid var(--color-black-first);
-  width: 100vw;
   height: 100vh;
   padding: var(--gap-medium);
   transform-origin: center center;
