@@ -20,16 +20,28 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function Modal(_ref) {
   var title = _ref.title,
       children = _ref.children,
-      active = _ref.active;
+      active = _ref.active,
+      actionClose = _ref.actionClose;
+
+  var handleClick = function handleClick(event) {
+    if (event.target.tagName === 'SECTION') {
+      actionClose();
+    }
+  };
+
   return /*#__PURE__*/_react.default.createElement(_styles.ModalStyle, {
-    active: active
-  }, /*#__PURE__*/_react.default.createElement(_Heading.default, null, title), /*#__PURE__*/_react.default.createElement(_styles.Box, null, children), /*#__PURE__*/_react.default.createElement(_Action.default, null, "Fechar"));
+    active: active,
+    onClick: handleClick
+  }, /*#__PURE__*/_react.default.createElement(_Heading.default, null, title), /*#__PURE__*/_react.default.createElement(_styles.Box, null, children), /*#__PURE__*/_react.default.createElement(_Action.default, {
+    onClick: actionClose
+  }, "Fechar"));
 }
 
 Modal.propTypes = {
   title: _propTypes.default.string.isRequired,
   children: _propTypes.default.element.isRequired,
-  active: _propTypes.default.bool.isRequired
+  active: _propTypes.default.bool.isRequired,
+  actionClose: _propTypes.default.func.isRequired
 };
 var _default = Modal;
 exports.default = _default;

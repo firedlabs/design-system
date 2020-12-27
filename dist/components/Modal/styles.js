@@ -26,7 +26,7 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  position: fixed;\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  box-sizing: border-box;\n  background-color: ", ";\n  border: 1rem solid var(--color-black-first);\n  width: 100vw;\n  height: 100vh;\n  padding: var(--gap-medium);\n  transform-origin: center center;\n  transform: scale(0);\n  transition: transform 400ms ease-in-out;\n\n  & > ", " {\n    ", ";\n    cursor: pointer;\n    color: var(--color-third);\n    background-color: var(--color-black-fourth);\n    padding: var(--gap-smallest);\n\n    &:hover {\n      transform: translateY(-0.5rem) scale(1.1);\n    }\n  }\n\n  ", "\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 100;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  box-sizing: border-box;\n  background-color: ", ";\n  border: 1rem solid var(--color-black-first);\n  width: 100vw;\n  height: 100vh;\n  padding: var(--gap-medium);\n  transform-origin: center center;\n  transform: scale(0);\n  transition: transform 400ms ease-in-out;\n\n  & > ", " {\n    ", ";\n    cursor: pointer;\n    color: var(--color-third);\n    background-color: var(--color-black-fourth);\n    padding: var(--gap-smallest);\n\n    &:hover {\n      transform: translateY(-0.5rem) scale(1.1);\n    }\n  }\n\n  ", "\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -65,6 +65,6 @@ var isOpen = function isOpen(_ref) {
   return active && (0, _styledComponents.css)(_templateObject2());
 };
 
-var ModalStyle = _styledComponents.default.article(_templateObject3(), (0, _polished.transparentize)(0.05, _palette.palette.colorSecond), _Action.default, _Tools.Body2, isOpen);
+var ModalStyle = _styledComponents.default.section(_templateObject3(), (0, _polished.transparentize)(0.05, _palette.palette.colorSecond), _Action.default, _Tools.Body2, isOpen);
 
 exports.ModalStyle = ModalStyle;
