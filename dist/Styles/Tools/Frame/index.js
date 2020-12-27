@@ -8,7 +8,7 @@ exports.Container = void 0;
 var _styledComponents = require("styled-components");
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: block;\n  max-width: 95%;\n  margin-right: auto;\n  margin-left: auto;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: block;\n  width: 95%;\n  max-width: 1340px;\n  margin-right: auto;\n  margin-left: auto;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
