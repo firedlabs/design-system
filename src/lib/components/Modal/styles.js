@@ -18,10 +18,11 @@ const isOpen = ({ active }) =>
     transform: scale(1);
   `
 
-export const ModalStyle = styled.article`
+export const ModalStyle = styled.section`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 100;
   display: flex;
   flex-direction: column;
   align-items: center;

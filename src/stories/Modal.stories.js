@@ -1,12 +1,14 @@
 import React from 'react'
-import { Modal, Button, Line } from '../lib'
-import { Field } from '../lib/components/Field'
+import { Modal, Button, Line, Field } from '../lib'
 
 export default {
   title: 'Components/Modal',
   componet: Modal,
   parameters: {
     layout: 'fullscreen'
+  },
+  argTypes: {
+    onClick: { action: 'clicked' }
   }
 }
 
@@ -29,5 +31,6 @@ export const Default = Template.bind({})
 Default.args = {
   title: 'Confirme sua matrícula',
   children,
-  active: true
+  active: true,
+  actionClose: () => {}
 }

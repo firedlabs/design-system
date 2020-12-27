@@ -4,14 +4,20 @@ import Heading from '../Heading'
 import Action from '../Action'
 import { ModalStyle, Box } from './styles'
 
-function Modal({ title, children, active }) {
+function Modal({ title, children, active, actionClose }) {
+  const handleClick = (event) => {
+    if (event.target.tagName === 'SECTION') {
+      actionClose()
+    }
+  }
+
   return (
-    <ModalStyle active={active}>
+    <ModalStyle active={active} onClick={handleClick}>
       <Heading>{title}</Heading>
 
       <Box>{children}</Box>
 
-      <Action>Fechar</Action>
+      <Action onClick={actionClose}>Fechar</Action>
     </ModalStyle>
   )
 }
@@ -19,7 +25,8 @@ function Modal({ title, children, active }) {
 Modal.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.element.isRequired,
-  active: PropTypes.bool.isRequired
+  active: PropTypes.bool.isRequired,
+  actionClose: PropTypes.func.isRequired
 }
 
 export default Modal

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Field } from '../../../lib'
+import { Field } from '../../lib'
 
 export default {
   title: 'Components/Field/Email',
@@ -10,5 +10,6 @@ const Template = (args) => <Field.Email {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-  label: 'Email'
+  label: 'Email',
+  placeholder: 'seu_email@gmail.com'
 }
