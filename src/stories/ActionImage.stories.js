@@ -12,6 +12,12 @@ export default {
         type: 'select',
         options: Object.keys(palette)
       }
+    },
+    size: {
+      control: {
+        type: 'select',
+        options: ['small', 'medium', 'big']
+      }
     }
   }
 }
@@ -22,7 +28,8 @@ export const Default = Template.bind({})
 Default.args = {
   href: 'https://alura.com.br',
   alt: 'Logo da Alura',
-  backgroundColor: 'colorFirst'
+  backgroundColor: 'colorFirst',
+  isPadding: false
 }
 
 export const ChangeColor = Template.bind({})

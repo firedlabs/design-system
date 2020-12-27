@@ -18,6 +18,7 @@ import Container from './Container'
 import Modal from './Modal'
 import Line from './Line'
 import Field from './Field'
+import ListActionImage from './ListActionImage'
 
 export {
   Button,
@@ -39,5 +40,6 @@ export {
   Container,
   Modal,
   Line,
-  Field
+  Field,
+  ListActionImage
 }
