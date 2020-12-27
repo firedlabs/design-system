@@ -8,7 +8,7 @@ function ListActionImage({ items, size }) {
 
   return (
     <ListActionImageStyle>
-      {items.map(({ href, src, alt, isPadding }) => (
+      {items.map(({ href, src, alt, isPadding, backgroundColor }) => (
         <ActionImage
           key={href}
           src={src}
@@ -16,6 +16,7 @@ function ListActionImage({ items, size }) {
           href={href}
           size={size}
           isPadding={isPadding}
+          backgroundColor={backgroundColor}
         />
       ))}
     </ListActionImageStyle>
