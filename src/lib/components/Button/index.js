@@ -27,7 +27,6 @@ const Button = styled.button`
   padding: var(--gap-medium);
   color: var(--color-third);
   ${BoxShadow.small};
-  cursor: pointer;
   text-decoration: none;
   text-align: center;
 

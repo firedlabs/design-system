@@ -41,7 +41,6 @@ export const ModalStyle = styled.section`
 
   & > ${Action} {
     ${Body2};
-    cursor: pointer;
     color: var(--color-third);
     background-color: var(--color-black-fourth);
     padding: var(--gap-smallest);

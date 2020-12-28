@@ -1,7 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
+import { Cursor } from '../../Tools'
 
 const Base = createGlobalStyle`
   html, body {
+    ${Cursor.standard};
     font-family: 'Fira Code', sans-serif;
     font-size: 10px;
     min-width: 290px;

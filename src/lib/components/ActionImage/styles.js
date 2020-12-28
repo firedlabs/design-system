@@ -46,7 +46,6 @@ const changeBoxShadow = ({ boxShadow }) => {
 export const ActionImageStyle = styled.a`
   box-sizing: border-box;
   display: inline-block;
-  cursor: pointer;
   width: ${optionsSize.small};
   height: ${optionsSize.small};
   ${BoxShadow.medium};

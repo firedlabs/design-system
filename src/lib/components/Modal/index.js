@@ -17,7 +17,9 @@ function Modal({ title, children, active, actionClose }) {
 
       <Box>{children}</Box>
 
-      <Action onClick={actionClose}>Fechar</Action>
+      <Action as="button" onClick={actionClose}>
+        Fechar
+      </Action>
     </ModalStyle>
   )
 }
