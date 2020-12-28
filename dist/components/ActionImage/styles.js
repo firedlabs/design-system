@@ -17,8 +17,18 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n  display: inline-block;\n  cursor: pointer;\n  width: ", ";\n  height: ", ";\n  ", ";\n  background-color: var(--color-first);\n  ", ";\n  padding: var(--gap-small);\n\n  &:hover {\n    transform: scale(1.1);\n  }\n\n  ", ";\n  ", ";\n  ", "\n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n  display: inline-block;\n  cursor: pointer;\n  width: ", ";\n  height: ", ";\n  ", ";\n  background-color: var(--color-first);\n  ", ";\n  padding: var(--gap-small);\n\n  &:hover {\n    transform: scale(1.1);\n  }\n\n  ", ";\n  ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n      ", "\n    "]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -94,6 +104,12 @@ var clearPadding = function clearPadding(_ref3) {
   return !isPadding && (0, _styledComponents.css)(_templateObject4());
 };
 
-var ActionImageStyle = _styledComponents.default.a(_templateObject5(), optionsSize.small, optionsSize.small, _Tools.BoxShadow.medium, changeColor, clearPadding, changeSize);
+var changeBoxShadow = function changeBoxShadow(_ref4) {
+  var boxShadow = _ref4.boxShadow;
+  console.log(boxShadow);
+  return boxShadow === 'small' && (0, _styledComponents.css)(_templateObject5(), _Tools.BoxShadow.small);
+};
+
+var ActionImageStyle = _styledComponents.default.a(_templateObject6(), optionsSize.small, optionsSize.small, _Tools.BoxShadow.medium, changeColor, clearPadding, changeSize, changeBoxShadow);
 
 exports.ActionImageStyle = ActionImageStyle;
