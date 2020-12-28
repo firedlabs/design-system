@@ -26,5 +26,25 @@ export const Default = Template.bind({})
 Default.args = {
   children: 'Matrícula 100% free',
   backgroundColor: 'colorFirst',
-  color: 'colorThird'
+  color: 'colorThird',
+  medium: false,
+  small: false
+}
+
+export const Medium = Template.bind({})
+Medium.args = {
+  children: 'Version medium',
+  backgroundColor: 'colorFirst',
+  color: 'colorThird',
+  medium: true,
+  small: false
+}
+
+export const Small = Template.bind({})
+Small.args = {
+  children: 'Version medium',
+  backgroundColor: 'colorFirst',
+  color: 'colorThird',
+  medium: false,
+  small: true
 }

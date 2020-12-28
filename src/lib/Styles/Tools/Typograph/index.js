@@ -19,23 +19,27 @@ export const Subtitle = css`
 `
 
 export const Body1 = css`
+  font-family: 'Fira Code', sans-serif;
   font-size: max(3rem, 20px);
   line-height: max(4.2rem, 28px);
   font-weight: 300;
 `
 
 export const Body2 = css`
+  font-family: 'Fira Code', sans-serif;
   font-size: max(2rem, 15px);
   line-height: max(2.6rem, 20px);
   font-weight: 500;
 `
 
 export const Caption = css`
+  font-family: 'Fira Code', sans-serif;
   font-size: max(1.8rem, 12px);
   line-height: max(2.4rem, 18px);
 `
 
 export const Link = css`
+  font-family: 'Fira Code', sans-serif;
   color: var(--color-first);
   font-weight: bold;
   text-underline-offset: 0.4em;
