@@ -8,7 +8,7 @@ exports.Link = exports.Caption = exports.Body2 = exports.Body1 = exports.Subtitl
 var _styledComponents = require("styled-components");
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  color: var(--color-first);\n  font-weight: bold;\n  text-underline-offset: 0.4em;\n  text-decoration-thickness: 0.1em;\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-family: 'Fira Code', sans-serif;\n  color: var(--color-first);\n  font-weight: bold;\n  text-underline-offset: 0.4em;\n  text-decoration-thickness: 0.1em;\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -18,7 +18,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  font-size: max(1.8rem, 12px);\n  line-height: max(2.4rem, 18px);\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-family: 'Fira Code', sans-serif;\n  font-size: max(1.8rem, 12px);\n  line-height: max(2.4rem, 18px);\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -28,7 +28,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  font-size: max(2rem, 15px);\n  line-height: max(2.6rem, 20px);\n  font-weight: 500;\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-family: 'Fira Code', sans-serif;\n  font-size: max(2rem, 15px);\n  line-height: max(2.6rem, 20px);\n  font-weight: 500;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -38,7 +38,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  font-size: max(3rem, 20px);\n  line-height: max(4.2rem, 28px);\n  font-weight: 300;\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-family: 'Fira Code', sans-serif;\n  font-size: max(3rem, 20px);\n  line-height: max(4.2rem, 28px);\n  font-weight: 300;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;

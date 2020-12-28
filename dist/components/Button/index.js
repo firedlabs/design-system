@@ -21,8 +21,28 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n  background-color: var(--color-first);\n  ", ";\n  padding: var(--gap-medium);\n  color: var(--color-third);\n  ", ";\n  cursor: pointer;\n\n  &:hover {\n    transform: translateY(calc(var(--gap-smallest) * -1)) scale(1.05);\n  }\n\n  ", ";\n  ", ";\n  ", ";\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n    ", "\n    padding: var(--gap-small);\n  "]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  background-color: var(--color-first);\n  ", ";\n  padding: var(--gap-medium);\n  color: var(--color-third);\n  ", ";\n  cursor: pointer;\n\n  &:hover {\n    transform: translateY(calc(var(--gap-smallest) * -1)) scale(1.05);\n  }\n\n  ", "\n"]);
+  var data = _taggedTemplateLiteral(["\n    ", "\n  "]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -49,7 +69,17 @@ var changeColor = function changeColor(_ref) {
   return (0, _styledComponents.css)(_templateObject(), _palette.palette[color], _palette.palette[backgroundColor]);
 };
 
-var Button = _styledComponents.default.button(_templateObject2(), _index.Title, _index.BoxShadow.small, changeColor);
+var hasMedium = function hasMedium(_ref2) {
+  var medium = _ref2.medium;
+  return medium && (0, _styledComponents.css)(_templateObject2(), _index.Subtitle);
+};
+
+var hasSmall = function hasSmall(_ref3) {
+  var small = _ref3.small;
+  return small && (0, _styledComponents.css)(_templateObject3(), _index.Body2);
+};
+
+var Button = _styledComponents.default.button(_templateObject4(), _index.Title, _index.BoxShadow.small, changeColor, hasMedium, hasSmall);
 
 Button.defaultProps = {
   children: 'Enviar'
