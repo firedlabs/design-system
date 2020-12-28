@@ -1,6 +1,13 @@
 import styled, { css } from 'styled-components'
 import { palette } from '../../index'
 
+const hasSmallest = ({ smallest }) =>
+  smallest &&
+  css`
+    padding-top: var(--gap-smallest);
+    padding-bottom: var(--gap-smallest);
+  `
+
 const hasMedium = ({ medium }) =>
   medium &&
   css`
@@ -32,6 +39,7 @@ const Section = styled.section`
       borderColor ? palette[borderColor] : 'var(--color-black-first)'};
   padding: var(--gap-small) var(--gap-medium);
 
+  ${hasSmallest};
   ${hasMedium};
   ${hasBig};
   ${hasBiggest};
