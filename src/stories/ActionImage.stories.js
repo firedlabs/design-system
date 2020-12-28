@@ -18,6 +18,12 @@ export default {
         type: 'select',
         options: ['small', 'medium', 'big']
       }
+    },
+    boxShadow: {
+      control: {
+        type: 'select',
+        options: [false, 'small']
+      }
     }
   }
 }
@@ -38,4 +44,13 @@ ChangeColor.args = {
   alt: 'Logo da Alura',
   backgroundColor: 'colorThird',
   src: negros
+}
+
+export const ChangeBoxShadow = Template.bind({})
+ChangeBoxShadow.args = {
+  href: 'https://alura.com.br',
+  alt: 'Logo da Alura',
+  backgroundColor: 'colorThird',
+  src: negros,
+  boxShadow: 'small'
 }
