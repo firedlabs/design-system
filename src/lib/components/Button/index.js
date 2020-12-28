@@ -28,9 +28,11 @@ const Button = styled.button`
   color: var(--color-third);
   ${BoxShadow.small};
   cursor: pointer;
+  text-decoration: none;
+  text-align: center;
 
   &:hover {
-    transform: translateY(calc(var(--gap-smallest) * -1)) scale(1.05);
+    transform: translateY(calc(var(--gap-smallest) / -2)) scale(1.03);
   }
 
   ${changeColor};
