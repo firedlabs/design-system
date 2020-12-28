@@ -22,7 +22,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  background-color: var(--color-first);\n  ", ";\n  padding: var(--gap-medium);\n  color: var(--color-third);\n  ", ";\n  cursor: pointer;\n\n  &:hover {\n    transform: translateY(calc(var(--gap-smallest) * -1)) scale(1.05);\n  }\n\n  ", ";\n  ", ";\n  ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: var(--color-first);\n  ", ";\n  padding: var(--gap-medium);\n  color: var(--color-third);\n  ", ";\n  cursor: pointer;\n  text-decoration: none;\n  text-align: center;\n\n  &:hover {\n    transform: translateY(calc(var(--gap-smallest) / -2)) scale(1.03);\n  }\n\n  ", ";\n  ", ";\n  ", ";\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
