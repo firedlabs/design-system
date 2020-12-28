@@ -55,3 +55,16 @@ Object.keys(_Frame).forEach(function (key) {
     }
   });
 });
+
+var _Cursor = require("./Cursor");
+
+Object.keys(_Cursor).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _Cursor[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _Cursor[key];
+    }
+  });
+});

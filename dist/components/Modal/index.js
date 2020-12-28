@@ -33,6 +33,7 @@ function Modal(_ref) {
     active: active,
     onClick: handleClick
   }, /*#__PURE__*/_react.default.createElement(_Heading.default, null, title), /*#__PURE__*/_react.default.createElement(_styles.Box, null, children), /*#__PURE__*/_react.default.createElement(_Action.default, {
+    as: "button",
     onClick: actionClose
   }, "Fechar"));
 }
