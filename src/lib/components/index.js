@@ -19,6 +19,10 @@ import Modal from './Modal'
 import Line from './Line'
 import Field from './Field'
 import ListActionImage from './ListActionImage'
+import Cover from './Cover'
+import Tag from './Tag'
+import ListTags from './ListTags'
+import ProgressBar from './ProgressBar'
 
 export {
   Button,
@@ -41,5 +45,9 @@ export {
   Modal,
   Line,
   Field,
-  ListActionImage
+  ListActionImage,
+  Cover,
+  Tag,
+  ListTags,
+  ProgressBar
 }

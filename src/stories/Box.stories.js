@@ -1,12 +1,24 @@
 import React from 'react'
-import { Box } from '../lib'
+import { Box, palette } from '../lib'
 import thumb from './assets/thumb.png'
+
+const colors = {
+  control: {
+    type: 'select',
+    options: Object.keys(palette)
+  }
+}
 
 export default {
   title: 'Components/Box',
   component: Box,
   parameters: {
     layout: 'padded'
+  },
+  argTypes: {
+    borderColor: colors,
+    backgroundColor: colors,
+    color: colors
   }
 }
 
@@ -47,4 +59,13 @@ export const Content = Template.bind({})
 Content.args = {
   light: false,
   children
+}
+
+export const ChangeColors = Template.bind({})
+ChangeColors.args = {
+  light: false,
+  children,
+  borderColor: 'colorSecond',
+  backgroundColor: 'colorThird',
+  color: 'colorFirst'
 }

@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { palette } from '../../Styles/Settings/Colors/palette'
 import { BoxShadow, Body1 } from '../../Styles/Tools'
 
 const hasImage = ({ image }) =>
@@ -7,9 +8,17 @@ const hasImage = ({ image }) =>
     display: inline-flex;
     padding: 0;
   `
+
+const changeColor = ({ color }) =>
+  color &&
+  css`
+    color: ${palette[color]};
+  `
+
 export const Content = styled.p`
   ${Body1};
   color: var(--color-third);
+  ${changeColor};
 
   & > strong {
     font-weight: bold;
@@ -37,6 +46,18 @@ const hasLight = ({ light }) =>
     }
   `
 
+const changeBorderColor = ({ borderColor }) =>
+  borderColor &&
+  css`
+    border-color: ${palette[borderColor]};
+  `
+
+const changeBackgroundColor = ({ backgroundColor }) =>
+  backgroundColor &&
+  css`
+    background-color: ${palette[backgroundColor]};
+  `
+
 export const Image = styled.img`
   width: 100%;
 `
@@ -51,4 +72,6 @@ export const BoxStyles = styled.article`
 
   ${hasLight};
   ${hasImage};
+  ${changeBorderColor};
+  ${changeBackgroundColor};
 `
