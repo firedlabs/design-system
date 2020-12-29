@@ -17,12 +17,18 @@ function Box(_ref) {
   var light = _ref.light,
       children = _ref.children,
       src = _ref.src,
-      alt = _ref.alt;
+      alt = _ref.alt,
+      as = _ref.as,
+      borderColor = _ref.borderColor,
+      backgroundColor = _ref.backgroundColor,
+      color = _ref.color;
   var isImage = src && alt;
   var isContent = !!children;
 
   var hasContent = function hasContent() {
-    return isContent && /*#__PURE__*/_react.default.createElement(_styles.Content, null, children);
+    return isContent && /*#__PURE__*/_react.default.createElement(_styles.Content, {
+      color: color
+    }, children);
   };
 
   var hasImage = function hasImage() {
@@ -33,16 +39,32 @@ function Box(_ref) {
   };
 
   return /*#__PURE__*/_react.default.createElement(_styles.BoxStyles, {
+    as: as,
     light: light,
-    image: isImage
+    image: isImage,
+    borderColor: borderColor,
+    backgroundColor: backgroundColor
   }, hasContent() || hasImage());
 }
 
+Box.defaultProps = {
+  as: 'article',
+  light: false,
+  children: false,
+  src: false,
+  alt: false,
+  borderColor: 'colorThird',
+  backgroundColor: 'colorBlackSecond'
+};
 Box.propTypes = {
+  as: _propTypes.default.string,
   light: _propTypes.default.bool,
-  children: _propTypes.default.string,
-  src: _propTypes.default.string,
-  alt: _propTypes.default.string
+  children: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.bool]),
+  src: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.bool]),
+  alt: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.bool]),
+  borderColor: _propTypes.default.string,
+  backgroundColor: _propTypes.default.string,
+  color: _propTypes.default.string
 };
 var _default = Box;
 exports.default = _default;
