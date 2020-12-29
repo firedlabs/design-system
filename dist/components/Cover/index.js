@@ -13,9 +13,9 @@ var _Box = _interopRequireDefault(require("../Box"));
 
 var _ListTags = _interopRequireDefault(require("../ListTags"));
 
-var _styles = require("./styles");
-
 var _ProgressBar = _interopRequireDefault(require("../ProgressBar"));
+
+var _styles = require("./styles");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
