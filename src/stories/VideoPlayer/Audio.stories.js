@@ -2,7 +2,7 @@ import React from 'react'
 import { Audio } from '../../lib'
 
 export default {
-  title: 'Components/Audio',
+  title: 'Components/VideoPlayer/Audio',
   component: Audio
 }
 

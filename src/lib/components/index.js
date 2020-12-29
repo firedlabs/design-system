@@ -27,6 +27,7 @@ import ListCovers from './ListCovers'
 import Live from './Live'
 import TitleLive from './TitleLive'
 import Audio from './VideoPlayer/Audio'
+import Fullscreen from './VideoPlayer/Fullscreen'
 
 export {
   Button,
@@ -57,5 +58,6 @@ export {
   ListCovers,
   Live,
   TitleLive,
-  Audio
+  Audio,
+  Fullscreen
 }
