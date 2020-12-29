@@ -24,6 +24,7 @@ import Tag from './Tag'
 import ListTags from './ListTags'
 import ProgressBar from './ProgressBar'
 import ListCovers from './ListCovers'
+import Live from './Live'
 
 export {
   Button,
@@ -51,5 +52,6 @@ export {
   Tag,
   ListTags,
   ProgressBar,
-  ListCovers
+  ListCovers,
+  Live
 }

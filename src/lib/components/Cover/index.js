@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Box from '../Box'
 import ListTags from '../ListTags'
-import { CoverStyle, Title } from './styles'
 import ProgressBar from '../ProgressBar'
+import { CoverStyle, Title } from './styles'
 
 function Cover({ src, alt, title, tags, progress }) {
   const hasProgress = () => progress && <ProgressBar {...progress} />
