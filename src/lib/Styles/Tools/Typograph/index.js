@@ -42,6 +42,7 @@ export const Link = css`
   font-family: 'Fira Code', sans-serif;
   color: var(--color-first);
   font-weight: bold;
+  text-decoration: underline;
   text-underline-offset: 0.4em;
   text-decoration-thickness: 0.1em;
 `
