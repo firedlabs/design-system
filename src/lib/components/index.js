@@ -28,6 +28,7 @@ import Live from './Live'
 import TitleLive from './TitleLive'
 import Audio from './VideoPlayer/Audio'
 import Fullscreen from './VideoPlayer/Fullscreen'
+import PlayAndPause from './VideoPlayer/PlayAndPause'
 
 export {
   Button,
@@ -59,5 +60,6 @@ export {
   Live,
   TitleLive,
   Audio,
-  Fullscreen
+  Fullscreen,
+  PlayAndPause
 }
