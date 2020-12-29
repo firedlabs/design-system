@@ -30,7 +30,7 @@ Cover.defaultProps = {
 Cover.propTypes = {
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
-  title: PropTypes.string.isREquired,
+  title: PropTypes.string.isRequired,
   tags: PropTypes.arrayOf(
     PropTypes.shape({
       children: PropTypes.string.isRequired,
