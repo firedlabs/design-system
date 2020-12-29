@@ -8,7 +8,7 @@ exports.Link = exports.Caption = exports.Body2 = exports.Body1 = exports.Subtitl
 var _styledComponents = require("styled-components");
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  font-family: 'Fira Code', sans-serif;\n  color: var(--color-first);\n  font-weight: bold;\n  text-underline-offset: 0.4em;\n  text-decoration-thickness: 0.1em;\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-family: 'Fira Code', sans-serif;\n  color: var(--color-first);\n  font-weight: bold;\n  text-decoration: underline;\n  text-underline-offset: 0.4em;\n  text-decoration-thickness: 0.1em;\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
