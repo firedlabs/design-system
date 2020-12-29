@@ -26,6 +26,7 @@ import ProgressBar from './ProgressBar'
 import ListCovers from './ListCovers'
 import Live from './Live'
 import TitleLive from './TitleLive'
+import Audio from './VideoPlayer/Audio'
 
 export {
   Button,
@@ -55,5 +56,6 @@ export {
   ProgressBar,
   ListCovers,
   Live,
-  TitleLive
+  TitleLive,
+  Audio
 }
