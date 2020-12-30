@@ -30,6 +30,7 @@ import Audio from './VideoPlayer/Audio'
 import Fullscreen from './VideoPlayer/Fullscreen'
 import PlayAndPause from './VideoPlayer/PlayAndPause'
 import VideoPlayerTimer from './VideoPlayer/VideoPlayerTimer'
+import VideoPlayerProgressBar from './VideoPlayer/VideoPlayerProgressBar'
 
 export {
   Button,
@@ -63,5 +64,6 @@ export {
   Audio,
   Fullscreen,
   PlayAndPause,
-  VideoPlayerTimer
+  VideoPlayerTimer,
+  VideoPlayerProgressBar
 }

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import color from 'styles/settings/color'
+import color from '../../src/lib/components/VideoPlayer/VideoPlayerProgressBar/node_modules/styles/settings/color'
 import size from 'styles/settings/size'
 
 const TimerStyles = styled.p`

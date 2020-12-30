@@ -7,6 +7,7 @@ const center = ({ center }) =>
     height: 100vh;
     display: flex;
     place-items: center center;
+    position: relative;
   `
 
 const Wrapper = styled.div`
