@@ -32,6 +32,7 @@ import PlayAndPause from './VideoPlayer/PlayAndPause'
 import VideoPlayerTimer from './VideoPlayer/VideoPlayerTimer'
 import VideoPlayerProgressBar from './VideoPlayer/VideoPlayerProgressBar'
 import Settings from './VideoPlayer/Settings'
+import Controls from './VideoPlayer/Controls'
 
 export {
   Button,
@@ -67,5 +68,6 @@ export {
   PlayAndPause,
   VideoPlayerTimer,
   VideoPlayerProgressBar,
-  Settings
+  Settings,
+  Controls
 }
