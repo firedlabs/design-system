@@ -1,23 +1,20 @@
 import styled from 'styled-components'
-import Box from 'components/Box'
-import size from 'styles/settings/size'
-import gap from 'styles/settings/gap'
-import color from 'styles/settings/color'
-import cursor from 'styles/tools/cursor'
+import { Cursor } from '../../../Styles/Tools'
+import Box from '../../Box'
 import { IconPlayerWrapper, IconPlayer } from '../IconPlayer'
 
 export const Action = styled.span`
   display: block;
-  font-size: ${size.small};
-  padding: ${gap.small} 0;
-  color: ${color.third};
-  color: ${({ active }) => active && color.first};
+
+  padding: var(--gap-smallest) 0;
+  color: var(--color-third);
+  color: ${({ active }) => active && 'var(--color-warning)'};
   transition: transform 100ms linear;
 
   &:hover {
-    color: ${color.first};
+    color: var(--color-warning);
     transform: scale(1.08);
-    ${cursor.hover};
+    ${Cursor.hover};
   }
 `
 
@@ -26,12 +23,12 @@ export const Velocity = styled(Box)`
   top: 0;
   right: 0;
   opacity: ${({ showVelocity }) => (showVelocity ? '1' : '0')};
-  transform: translateY(calc((100% + ${gap.big}) * -1))
+  transform: translateY(calc((100% + var(--gap-big)) * -1))
     translateX(${({ showVelocity }) => (showVelocity ? '0' : '120%')});
-  padding: 0 ${gap.small};
+  padding: 0 var(--gap-smallest);
 
   &:hover {
-    transform: translateY(calc((100% + ${gap.big}) * -1)) translateX(0);
+    transform: translateY(calc((100% + var(--gap-big)) * -1)) translateX(0);
   }
 `
 
@@ -40,13 +37,13 @@ export const Menu = styled(Box).attrs({ as: 'menu' })`
   opacity: ${({ showMenu }) => (showMenu ? '1' : '0')};
   top: 0;
   right: 0;
-  padding: 0 ${gap.small};
+  padding: 0 var(--gap-smallest);
   transition: transform 200ms ease-in-out, opacity 150ms ease-in-out;
-  transform: translateY(calc((100% + ${gap.big}) * -1))
+  transform: translateY(calc((100% + var(--gap-big)) * -1))
     translateX(${({ showMenu }) => (showMenu ? '0' : '120%')});
 
   &:hover {
-    transform: translateY(calc((100% + ${gap.big}) * -1)) translateX(0);
+    transform: translateY(calc((100% + var(--gap-big)) * -1)) translateX(0);
   }
 `
 
