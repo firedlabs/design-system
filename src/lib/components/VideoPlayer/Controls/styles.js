@@ -7,6 +7,10 @@ const wrappers = css`
   display: flex;
   position: relative;
   z-index: 2;
+
+  & > *:not(:last-child) {
+    margin-right: var(--gap-medium);
+  }
 `
 
 export const Left = styled.div`
@@ -29,7 +33,7 @@ export const ControlsStyle = styled.menu`
   z-index: 20;
   width: 100%;
   height: 50px;
-  background-color: ${transparentize(0.7, palette.colorBlackFirst)};
+  background-color: ${transparentize(0.4, palette.colorSecond)};
   transition: transform 100ms linear;
   transform: ${({ show }) => (show ? 'translateY(0)' : 'translateY(100%)')};
 

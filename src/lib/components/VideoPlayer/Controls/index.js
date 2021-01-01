@@ -4,8 +4,8 @@ import Audio from '../Audio'
 import Fullscreen from '../Fullscreen'
 import PlayAndPause from '../PlayAndPause'
 import VideoPlayerProgressBar from '../VideoPlayerProgressBar'
-import Settings from '../Settings'
 import VideoPlayerTimer from '../VideoPlayerTimer'
+import PlaybackRate from '../PlaybackRate'
 import { ControlsStyle, Left, Right } from './styles'
 
 function Controls({
@@ -21,10 +21,9 @@ function Controls({
   volume,
   handleVolume,
   fullscreen,
-  showSettings,
-  showVelocity,
-  toggleShowSettings,
+  activeFullscreen,
   toggleVelocity,
+  showVelocity,
   changeActiveVelocity,
   velocityActive,
   velocities,
@@ -57,16 +56,14 @@ function Controls({
       <VideoPlayerTimer currentTime={progress} duration={duration} />
 
       <Right>
-        <Settings
-          showSettings={showSettings}
+        <PlaybackRate
           showVelocity={showVelocity}
-          toggleShowSettings={toggleShowSettings}
-          toggleVelocity={toggleVelocity}
           changeActiveVelocity={changeActiveVelocity}
           velocityActive={velocityActive}
           velocities={velocities}
+          toggleVelocity={toggleVelocity}
         />
-        <Fullscreen onClick={fullscreen} />
+        <Fullscreen onClick={fullscreen} active={activeFullscreen} />
       </Right>
     </ControlsStyle>
   )
@@ -87,12 +84,11 @@ Controls.propTypes = {
   volume: PropTypes.bool.isRequired,
   handleVolume: PropTypes.func.isRequired,
   fullscreen: PropTypes.func.isRequired,
-  showSettings: PropTypes.bool.isRequired,
+  activeFullscreen: PropTypes.bool.isRequired,
   showVelocity: PropTypes.bool.isRequired,
-  toggleShowSettings: PropTypes.func.isRequired,
-  toggleVelocity: PropTypes.func.isRequired,
   changeActiveVelocity: PropTypes.func.isRequired,
   velocityActive: PropTypes.bool.isRequired,
+  toggleVelocity: PropTypes.func.isRequired,
   velocities: PropTypes.arrayOf(PropTypes.string).isRequired,
   onMouseLeave: PropTypes.func.isRequired,
   onMouseEnter: PropTypes.func.isRequired

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import sprite from '../../assets/images/icons.png'
-import { Cursor } from '../../Styles/Tools'
+import { Cursor, BoxShadow } from '../../Styles/Tools'
 
 export const BigPlay = styled.button`
   display: flex;
@@ -9,18 +9,19 @@ export const BigPlay = styled.button`
   position: absolute;
   width: 90px;
   height: 90px;
-  background-color: var(--color-second);
+  background-color: var(--color-first);
   filter: grayscale(1);
   transition: opacity 100ms linear;
   opacity: ${({ active }) => (active ? '1' : '0')};
   transition: opacity 200ms linear;
+  ${BoxShadow.small}
 
   &:after {
     content: '';
-    background: url(${sprite}) -16px -64px no-repeat;
+    background: url(${sprite}) 0 0 no-repeat;
     width: 16px;
     height: 16px;
-    transform: scale(3.8);
+    transform: scale(3);
     image-rendering: crisp-edges;
     image-rendering: pixelated;
   }

@@ -20,7 +20,7 @@ export const Buffer = styled.span`
 export const Bar = styled.label.attrs({ htmlFor: 'progress' })`
   ${GenericBar};
   z-index: 2;
-  background-color: var(--color-second);
+  background-color: var(--color-first);
 `
 
 export const InputRange = styled.input.attrs({
@@ -47,7 +47,7 @@ export const VideoPlayerProgressBarStyle = styled.div`
   height: 0.6rem;
   transform-origin: center center;
   transform: translateY(-100%);
-  background-color: var(--color-black-fourth);
+  background-color: var(--color-second);
 
   &:hover,
   &:focus {

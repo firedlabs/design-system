@@ -15,11 +15,11 @@ function VideoPlayer({ poster, sources }) {
   const [buffer, setBuffer] = useState(0)
   const [bigPlay, setBigPlay] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [activeFullscreen, setActiveFullscreen] = useState(false)
   const wrapper = useRef()
   const video = useRef()
 
   const velocities = ['0.25', '0.5', '0.75', '1', '1.25', '1.5', '1.75', '2']
-  const [showSettings, setShowSettings] = useState(false)
   const [showVelocity, setShowVelocity] = useState(false)
   const [velocityActive, setVelocityActive] = useState('1')
 
@@ -42,7 +42,6 @@ function VideoPlayer({ poster, sources }) {
     const timer = setTimeout(() => {
       if (outControls) {
         setShowControls(false)
-        setShowSettings(false)
         setShowVelocity(false)
       }
     }, 3000)
@@ -64,7 +63,6 @@ function VideoPlayer({ poster, sources }) {
       setBigPlay(false)
       setPlay(true)
     }
-    setShowSettings(false)
     setShowVelocity(false)
   }
 
@@ -113,22 +111,14 @@ function VideoPlayer({ poster, sources }) {
     changeVolume(value)
   }
 
-  const fullscreen = () => {
+  const toggleFullscreen = () => {
     if (document.fullscreenElement) {
       document.exitFullscreen()
+      setActiveFullscreen(false)
     } else {
       wrapper.current.requestFullscreen()
+      setActiveFullscreen(true)
     }
-  }
-
-  const toggleShowSettings = () => {
-    setShowVelocity(false)
-    setShowSettings((oldshowSettings) => !oldshowSettings)
-  }
-
-  const toggleVelocity = () => {
-    setShowSettings((oldshowSettings) => !oldshowSettings)
-    setShowVelocity((oldShowVelocity) => !oldShowVelocity)
   }
 
   const changeActiveVelocity = ({ target }) => {
@@ -136,6 +126,10 @@ function VideoPlayer({ poster, sources }) {
     setShowVelocity(false)
     setVelocityActive(playbackRate)
     video.current.playbackRate = playbackRate
+  }
+
+  const toggleVelocity = () => {
+    setShowVelocity((old) => !old)
   }
 
   const handleMouseLeave = () => setOutControls(true)
@@ -187,7 +181,7 @@ function VideoPlayer({ poster, sources }) {
         return oldVelocity
       })
     },
-    f: fullscreen
+    f: toggleFullscreen
   }
 
   const handleKeyUp = ({ key }) => keys[key] && keys[key]()
@@ -237,13 +231,12 @@ function VideoPlayer({ poster, sources }) {
         handleMute={handleMute}
         volume={volume}
         handleVolume={handleVolume}
-        fullscreen={fullscreen}
-        showSettings={showSettings}
+        fullscreen={toggleFullscreen}
+        activeFullscreen={activeFullscreen}
         showVelocity={showVelocity}
-        toggleShowSettings={toggleShowSettings}
-        toggleVelocity={toggleVelocity}
         changeActiveVelocity={changeActiveVelocity}
         velocityActive={velocityActive}
+        toggleVelocity={toggleVelocity}
         velocities={velocities}
       />
     </Wrapper>

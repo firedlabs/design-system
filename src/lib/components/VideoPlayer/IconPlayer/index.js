@@ -3,11 +3,13 @@ import sprite from '../../../assets/images/icons.png'
 import { Cursor } from '../../../Styles/Tools'
 
 const positionIcons = {
-  play: '-16px -64px',
-  pause: '0 -64px',
-  audio: '-48px -80px',
-  mute: '-64px -80px',
-  fullscreen: '-32px -64px',
+  audio: '0 -16px',
+  mute: '-16px -16px',
+  play: '0 0',
+  pause: '-16px 0',
+  fullscreen: '0 -32px',
+  nofullscreen: '-16px -32px',
+  playbackRate: '0 -48px',
   settings: '-112px 0'
 }
 
@@ -20,26 +22,22 @@ export const IconPlayer = styled.span`
   width: var(--wh);
   height: var(--wh);
   opacity: 0;
-  transform-origin: top left;
+  transform-origin: left top;
   transform: scale(var(--scale));
   image-rendering: crisp-edges;
   image-rendering: pixelated;
   ${Cursor.hover};
-  transition: opacity 100ms linear;
+  transition: opacity 100ms linear, transform 100ms linear;
 `
 
 export const IconPlayerWrapper = styled.div`
   --wh: 1.6rem;
-  --scale: 2.4;
+  --scale: 2;
   position: relative;
   width: calc(var(--wh) * var(--scale));
   height: calc(var(--wh) * var(--scale));
   transform-origin: center center;
   transition: transform 100ms linear;
-
-  &:not(:last-child) {
-    margin-right: var(--gap-medium);
-  }
 
   &:hover,
   &:focus {

@@ -35,6 +35,7 @@ import Settings from './VideoPlayer/Settings'
 import Controls from './VideoPlayer/Controls'
 import Loading from './Loading'
 import VideoPlayer from './VideoPlayer'
+import PlaybackRate from './VideoPlayer/PlaybackRate'
 
 export {
   Button,
@@ -73,5 +74,6 @@ export {
   Settings,
   Controls,
   Loading,
-  VideoPlayer
+  VideoPlayer,
+  PlaybackRate
 }

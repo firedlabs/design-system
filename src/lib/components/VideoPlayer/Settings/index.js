@@ -45,11 +45,11 @@ function Settings({
 
 Settings.propTypes = {
   showSettings: PropTypes.bool.isRequired,
-  showVelocity: PropTypes.bool.isRequired,
   toggleShowSettings: PropTypes.func.isRequired,
   toggleVelocity: PropTypes.func.isRequired,
-  changeActiveVelocity: PropTypes.func.isRequired,
   velocityActive: PropTypes.bool.isRequired,
+  changeActiveVelocity: PropTypes.func.isRequired,
+  showVelocity: PropTypes.bool.isRequired,
   velocities: PropTypes.arrayOf(PropTypes.string).isRequired
 }
 
