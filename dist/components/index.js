@@ -171,6 +171,66 @@ Object.defineProperty(exports, "TitleLive", {
     return _TitleLive.default;
   }
 });
+Object.defineProperty(exports, "Audio", {
+  enumerable: true,
+  get: function get() {
+    return _Audio.default;
+  }
+});
+Object.defineProperty(exports, "Fullscreen", {
+  enumerable: true,
+  get: function get() {
+    return _Fullscreen.default;
+  }
+});
+Object.defineProperty(exports, "PlayAndPause", {
+  enumerable: true,
+  get: function get() {
+    return _PlayAndPause.default;
+  }
+});
+Object.defineProperty(exports, "VideoPlayerTimer", {
+  enumerable: true,
+  get: function get() {
+    return _VideoPlayerTimer.default;
+  }
+});
+Object.defineProperty(exports, "VideoPlayerProgressBar", {
+  enumerable: true,
+  get: function get() {
+    return _VideoPlayerProgressBar.default;
+  }
+});
+Object.defineProperty(exports, "Settings", {
+  enumerable: true,
+  get: function get() {
+    return _Settings.default;
+  }
+});
+Object.defineProperty(exports, "Controls", {
+  enumerable: true,
+  get: function get() {
+    return _Controls.default;
+  }
+});
+Object.defineProperty(exports, "Loading", {
+  enumerable: true,
+  get: function get() {
+    return _Loading.default;
+  }
+});
+Object.defineProperty(exports, "VideoPlayer", {
+  enumerable: true,
+  get: function get() {
+    return _VideoPlayer.default;
+  }
+});
+Object.defineProperty(exports, "PlaybackRate", {
+  enumerable: true,
+  get: function get() {
+    return _PlaybackRate.default;
+  }
+});
 
 var _Button = _interopRequireDefault(require("./Button"));
 
@@ -227,5 +287,25 @@ var _ListCovers = _interopRequireDefault(require("./ListCovers"));
 var _Live = _interopRequireDefault(require("./Live"));
 
 var _TitleLive = _interopRequireDefault(require("./TitleLive"));
+
+var _Audio = _interopRequireDefault(require("./VideoPlayer/Audio"));
+
+var _Fullscreen = _interopRequireDefault(require("./VideoPlayer/Fullscreen"));
+
+var _PlayAndPause = _interopRequireDefault(require("./VideoPlayer/PlayAndPause"));
+
+var _VideoPlayerTimer = _interopRequireDefault(require("./VideoPlayer/VideoPlayerTimer"));
+
+var _VideoPlayerProgressBar = _interopRequireDefault(require("./VideoPlayer/VideoPlayerProgressBar"));
+
+var _Settings = _interopRequireDefault(require("./VideoPlayer/Settings"));
+
+var _Controls = _interopRequireDefault(require("./VideoPlayer/Controls"));
+
+var _Loading = _interopRequireDefault(require("./Loading"));
+
+var _VideoPlayer = _interopRequireDefault(require("./VideoPlayer"));
+
+var _PlaybackRate = _interopRequireDefault(require("./VideoPlayer/PlaybackRate"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
