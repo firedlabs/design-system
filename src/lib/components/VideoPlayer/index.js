@@ -1,8 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import PropTypes from 'prop-types'
-import Loading from 'components/Loading'
-
-import UserService from 'services/User'
+import Loading from '../Loading'
 import Controls from './Controls'
 import { BigPlay, Source, Video, Wrapper } from './styles'
 
@@ -35,7 +33,6 @@ function VideoPlayer({ poster, sources }) {
 
   useEffect(() => {
     const volumeStorage = localStorage.getItem('volume') ?? 100
-    UserService.updateVolume({ volume: volumeStorage })
     setVolume(volumeStorage)
     video.current.volume = volumeStorage / 100
     video.current.focus()
@@ -49,9 +46,6 @@ function VideoPlayer({ poster, sources }) {
         setShowVelocity(false)
       }
     }, 3000)
-
-    const volumeStorage = localStorage.getItem('volume') ?? 100
-    UserService.updateVolume({ volume: volumeStorage })
 
     return () => clearTimeout(timer)
   }, [showControls, outControls])
