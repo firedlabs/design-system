@@ -2,15 +2,16 @@ import React, { useEffect, useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 import Loading from '../Loading'
 import Controls from './Controls'
-import { BigPlay, Source, Video, Wrapper } from './styles'
+import { BigPlay, Video, Wrapper } from './styles'
 
-function VideoPlayer({ poster, sources }) {
+function VideoPlayer({ poster, sources, lessons, lessonActive }) {
+  const [sourcesState, setSourcesState] = useState(sources)
   const [showControls, setShowControls] = useState(false)
   const [outControls, setOutControls] = useState(true)
   const [play, setPlay] = useState(false)
   const [mute, setMute] = useState(false)
   const [volume, setVolume] = useState(100)
-  const [duration, setDuration] = useState(0)
+  const [duration, setDuration] = useState(100)
   const [progress, setProgress] = useState(0)
   const [buffer, setBuffer] = useState(0)
   const [bigPlay, setBigPlay] = useState(false)
@@ -22,6 +23,10 @@ function VideoPlayer({ poster, sources }) {
   const velocities = ['0.25', '0.5', '0.75', '1', '1.25', '1.5', '1.75', '2']
   const [showVelocity, setShowVelocity] = useState(false)
   const [velocityActive, setVelocityActive] = useState('1')
+
+  const [menuLessonOpen, setMenuLessonOpen] = useState(false)
+  const [playlistOpen, setPlaylistOpen] = useState(false)
+  const [lessonActiveState, setLessonActiveState] = useState(lessonActive)
 
   useEffect(() => {
     const { buffered } = video.current
@@ -43,6 +48,7 @@ function VideoPlayer({ poster, sources }) {
       if (outControls) {
         setShowControls(false)
         setShowVelocity(false)
+        setPlaylistOpen(false)
       }
     }, 3000)
 
@@ -64,6 +70,15 @@ function VideoPlayer({ poster, sources }) {
       setPlay(true)
     }
     setShowVelocity(false)
+    setPlaylistOpen(false)
+  }
+
+  const clickInVideo = () => {
+    if (playlistOpen) {
+      setPlaylistOpen(false)
+    } else {
+      playAndPause()
+    }
   }
 
   const handleChangeProgressBar = ({ target }) => {
@@ -136,6 +151,20 @@ function VideoPlayer({ poster, sources }) {
 
   const handleMouseEnter = () => setOutControls(false)
 
+  const togglePlaylist = () => setPlaylistOpen((old) => !old)
+  const toogleMenuLesson = () => setMenuLessonOpen((old) => !old)
+  const changeLessonActive = (event) =>
+    setLessonActiveState(event.target.textContent)
+  const changeVideo = (event) => {
+    const src = event.currentTarget.getAttribute('id')
+    const type = event.currentTarget.getAttribute('data-type')
+
+    setSourcesState({
+      src,
+      type
+    })
+  }
+
   const keys = {
     ' ': playAndPause,
     ArrowRight: () => {
@@ -201,18 +230,16 @@ function VideoPlayer({ poster, sources }) {
       ref={wrapper}
     >
       <Video
-        poster={poster}
-        onClick={playAndPause}
+        onClick={clickInVideo}
         ref={video}
         onTimeUpdate={handleTimeUpdate}
         onLoadStart={handleLoadStart}
         onWaiting={handleWaiting}
         onCanPlay={handleCanPlay}
-      >
-        {sources.map(({ src, type }) => (
-          <Source key={src} src={src} type={type} />
-        ))}
-      </Video>
+        key={sourcesState.src}
+        src={sourcesState.src}
+        type={sourcesState.type}
+      />
 
       <Loading active={loading} />
       <BigPlay active={bigPlay} onClick={playAndPause} />
@@ -238,19 +265,39 @@ function VideoPlayer({ poster, sources }) {
         velocityActive={velocityActive}
         toggleVelocity={toggleVelocity}
         velocities={velocities}
+        lessons={lessons}
+        lessonActive={lessonActiveState}
+        clickLesson={changeLessonActive}
+        playlistOpen={playlistOpen}
+        clickIconPlaylist={togglePlaylist}
+        menuOpen={menuLessonOpen}
+        clickMenuLesson={toogleMenuLesson}
+        clickVideo={changeVideo}
       />
     </Wrapper>
   )
 }
 
+const videos = PropTypes.arrayOf(
+  PropTypes.shape({
+    poster: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired
+  })
+).isRequired
+
+const lesson = PropTypes.shape({
+  title: PropTypes.string.isRequired,
+  videos
+})
+
 VideoPlayer.propTypes = {
   poster: PropTypes.string.isRequired,
-  sources: PropTypes.arrayOf(
-    PropTypes.shape({
-      src: PropTypes.string.isRequired,
-      type: PropTypes.string.isRequired
-    })
-  ).isRequired
+  sources: PropTypes.shape({
+    src: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired
+  }).isRequired,
+  lessons: PropTypes.arrayOf(lesson),
+  lessonActive: PropTypes.string
 }
 
 export default VideoPlayer

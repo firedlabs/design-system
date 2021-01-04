@@ -1,8 +1,8 @@
 import React from 'react'
-import { Fullscreen } from '../../lib'
+import { Fullscreen } from '../../../lib'
 
 export default {
-  title: 'Components/VideoPlayer/Fullscreen',
+  title: 'Components/VideoPlayer/Elements/Fullscreen',
   component: Fullscreen
 }
 

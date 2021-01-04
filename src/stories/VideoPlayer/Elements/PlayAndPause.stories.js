@@ -1,8 +1,8 @@
 import React from 'react'
-import { PlayAndPause } from '../../lib'
+import { PlayAndPause } from '../../../lib'
 
 export default {
-  title: 'Components/VideoPlayer/PlayAndPause',
+  title: 'Components/VideoPlayer/Elements/PlayAndPause',
   component: PlayAndPause
 }
 

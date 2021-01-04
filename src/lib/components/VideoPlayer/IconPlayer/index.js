@@ -10,7 +10,7 @@ const positionIcons = {
   fullscreen: '0 -32px',
   nofullscreen: '-16px -32px',
   playbackRate: '0 -48px',
-  settings: '-112px 0'
+  playlist: '-16px -48px'
 }
 
 export const IconPlayer = styled.span`

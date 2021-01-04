@@ -4,8 +4,6 @@ import ActionImage from '../ActionImage'
 import ListActionImageStyle from './styles'
 
 function ListActionImage({ items, size }) {
-  console.log('size', size)
-
   return (
     <ListActionImageStyle>
       {items.map(({ href, src, alt, isPadding, backgroundColor }) => (

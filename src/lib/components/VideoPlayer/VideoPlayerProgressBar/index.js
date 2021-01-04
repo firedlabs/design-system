@@ -16,7 +16,7 @@ function VideoPlayerProgressBar({ max, value, onChange, buffer }) {
 }
 
 VideoPlayerProgressBar.defaultProps = {
-  max: 0,
+  max: 100,
   value: 0
 }
 

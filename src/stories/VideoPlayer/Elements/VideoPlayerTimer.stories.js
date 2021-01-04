@@ -1,8 +1,8 @@
 import React from 'react'
-import { VideoPlayerTimer } from '../../lib'
+import { VideoPlayerTimer } from '../../../lib'
 
 export default {
-  title: 'Components/VideoPlayer/VideoPlayerTimer',
+  title: 'Components/VideoPlayer/Elements/VideoPlayerTimer',
   component: VideoPlayerTimer
 }
 

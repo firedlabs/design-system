@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import Wrapper from '../components/Wrapper'
-import { PlaybackRate } from '../../lib'
+import Wrapper from '../../components/Wrapper'
+import { PlaybackRate } from '../../../lib'
 
 export default {
-  title: 'Components/VideoPlayer/PlaybackRate',
+  title: 'Components/VideoPlayer/Elements/PlaybackRate',
   component: PlaybackRate
 }
 

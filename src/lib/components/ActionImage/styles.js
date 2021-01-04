@@ -32,16 +32,11 @@ const clearPadding = ({ isPadding }) =>
     padding: 0;
   `
 
-const changeBoxShadow = ({ boxShadow }) => {
-  console.log(boxShadow)
-
-  return (
-    boxShadow === 'small' &&
-    css`
-      ${BoxShadow.small}
-    `
-  )
-}
+const changeBoxShadow = ({ boxShadow }) =>
+  boxShadow === 'small' &&
+  css`
+    ${BoxShadow.small}
+  `
 
 export const ActionImageStyle = styled.a`
   box-sizing: border-box;

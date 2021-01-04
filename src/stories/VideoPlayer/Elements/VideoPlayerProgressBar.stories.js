@@ -1,9 +1,9 @@
 import React from 'react'
-import { VideoPlayerProgressBar } from '../../lib'
-import Wrapper from '../components/Wrapper'
+import { VideoPlayerProgressBar } from '../../../lib'
+import Wrapper from '../../components/Wrapper'
 
 export default {
-  title: 'Components/VideoPlayer/VideoPlayerProgressBar',
+  title: 'Components/VideoPlayer/Elements/VideoPlayerProgressBar',
   component: VideoPlayerProgressBar
 }
 

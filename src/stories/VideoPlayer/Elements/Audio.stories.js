@@ -1,8 +1,8 @@
 import React from 'react'
-import { Audio } from '../../lib'
+import { Audio } from '../../../lib'
 
 export default {
-  title: 'Components/VideoPlayer/Audio',
+  title: 'Components/VideoPlayer/Elements/Audio',
   component: Audio
 }
 

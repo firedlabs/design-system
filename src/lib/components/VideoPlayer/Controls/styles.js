@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 import { transparentize } from 'polished'
 import { palette } from '../../../Styles/Settings/Colors/palette'
 import { Cursor } from '../../../Styles/Tools'
+import { WrapperLesson } from '../Playlist/styles'
 
 const wrappers = css`
   display: flex;
@@ -22,6 +23,7 @@ export const Right = styled.div`
 `
 
 export const ControlsStyle = styled.menu`
+  --height-controls: 5rem;
   display: flex;
   box-sizing: border-box;
   padding-left: var(--gap-small);
@@ -32,7 +34,7 @@ export const ControlsStyle = styled.menu`
   bottom: 0;
   z-index: 20;
   width: 100%;
-  height: 50px;
+  height: var(--height-controls);
   background-color: ${transparentize(0.4, palette.colorSecond)};
   transition: transform 100ms linear;
   transform: ${({ show }) => (show ? 'translateY(0)' : 'translateY(100%)')};
@@ -41,5 +43,9 @@ export const ControlsStyle = styled.menu`
   &:focus {
     transform: translate(0);
     ${Cursor.standard};
+  }
+
+  & ${WrapperLesson} {
+    height: calc(100vh - var(--height-controls));
   }
 `
