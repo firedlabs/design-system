@@ -70,8 +70,8 @@ export const BoxStyles = styled.article`
   padding: var(--gap-medium);
   background-color: var(--color-black-second);
 
-  ${hasLight};
   ${hasImage};
   ${changeBorderColor};
   ${changeBackgroundColor};
+  ${hasLight};
 `
