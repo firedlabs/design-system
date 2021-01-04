@@ -33,7 +33,7 @@ function VideoPlayerProgressBar(_ref) {
 }
 
 VideoPlayerProgressBar.defaultProps = {
-  max: 0,
+  max: 100,
   value: 0
 };
 VideoPlayerProgressBar.propTypes = {

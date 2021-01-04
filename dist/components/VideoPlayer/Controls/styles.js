@@ -15,12 +15,14 @@ var _palette = require("../../../Styles/Settings/Colors/palette");
 
 var _Tools = require("../../../Styles/Tools");
 
+var _styles = require("../Playlist/styles");
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  box-sizing: border-box;\n  padding-left: var(--gap-small);\n  padding-right: var(--gap-small);\n  justify-content: space-between;\n  align-items: center;\n  position: absolute;\n  bottom: 0;\n  z-index: 20;\n  width: 100%;\n  height: 50px;\n  background-color: ", ";\n  transition: transform 100ms linear;\n  transform: ", ";\n\n  &:hover,\n  &:focus {\n    transform: translate(0);\n    ", ";\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  --height-controls: 5rem;\n  display: flex;\n  box-sizing: border-box;\n  padding-left: var(--gap-small);\n  padding-right: var(--gap-small);\n  justify-content: space-between;\n  align-items: center;\n  position: absolute;\n  bottom: 0;\n  z-index: 20;\n  width: 100%;\n  height: var(--height-controls);\n  background-color: ", ";\n  transition: transform 100ms linear;\n  transform: ", ";\n\n  &:hover,\n  &:focus {\n    transform: translate(0);\n    ", ";\n  }\n\n  & ", " {\n    height: calc(100vh - var(--height-controls));\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -74,6 +76,6 @@ exports.Right = Right;
 var ControlsStyle = _styledComponents.default.menu(_templateObject4(), (0, _polished.transparentize)(0.4, _palette.palette.colorSecond), function (_ref) {
   var show = _ref.show;
   return show ? 'translateY(0)' : 'translateY(100%)';
-}, _Tools.Cursor.standard);
+}, _Tools.Cursor.standard, _styles.WrapperLesson);
 
 exports.ControlsStyle = ControlsStyle;

@@ -28,7 +28,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n      ", "\n    "]);
+  var data = _taggedTemplateLiteral(["\n    ", "\n  "]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -106,7 +106,6 @@ var clearPadding = function clearPadding(_ref3) {
 
 var changeBoxShadow = function changeBoxShadow(_ref4) {
   var boxShadow = _ref4.boxShadow;
-  console.log(boxShadow);
   return boxShadow === 'small' && (0, _styledComponents.css)(_templateObject5(), _Tools.BoxShadow.small);
 };
 

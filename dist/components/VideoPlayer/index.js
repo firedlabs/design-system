@@ -37,76 +37,98 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function VideoPlayer(_ref) {
   var poster = _ref.poster,
-      sources = _ref.sources;
+      sources = _ref.sources,
+      lessons = _ref.lessons,
+      lessonActive = _ref.lessonActive;
 
-  var _useState = (0, _react.useState)(false),
+  var _useState = (0, _react.useState)(sources),
       _useState2 = _slicedToArray(_useState, 2),
-      showControls = _useState2[0],
-      setShowControls = _useState2[1];
+      sourcesState = _useState2[0],
+      setSourcesState = _useState2[1];
 
-  var _useState3 = (0, _react.useState)(true),
+  var _useState3 = (0, _react.useState)(false),
       _useState4 = _slicedToArray(_useState3, 2),
-      outControls = _useState4[0],
-      setOutControls = _useState4[1];
+      showControls = _useState4[0],
+      setShowControls = _useState4[1];
 
-  var _useState5 = (0, _react.useState)(false),
+  var _useState5 = (0, _react.useState)(true),
       _useState6 = _slicedToArray(_useState5, 2),
-      play = _useState6[0],
-      setPlay = _useState6[1];
+      outControls = _useState6[0],
+      setOutControls = _useState6[1];
 
   var _useState7 = (0, _react.useState)(false),
       _useState8 = _slicedToArray(_useState7, 2),
-      mute = _useState8[0],
-      setMute = _useState8[1];
+      play = _useState8[0],
+      setPlay = _useState8[1];
 
-  var _useState9 = (0, _react.useState)(100),
+  var _useState9 = (0, _react.useState)(false),
       _useState10 = _slicedToArray(_useState9, 2),
-      volume = _useState10[0],
-      setVolume = _useState10[1];
+      mute = _useState10[0],
+      setMute = _useState10[1];
 
-  var _useState11 = (0, _react.useState)(0),
+  var _useState11 = (0, _react.useState)(100),
       _useState12 = _slicedToArray(_useState11, 2),
-      duration = _useState12[0],
-      setDuration = _useState12[1];
+      volume = _useState12[0],
+      setVolume = _useState12[1];
 
-  var _useState13 = (0, _react.useState)(0),
+  var _useState13 = (0, _react.useState)(100),
       _useState14 = _slicedToArray(_useState13, 2),
-      progress = _useState14[0],
-      setProgress = _useState14[1];
+      duration = _useState14[0],
+      setDuration = _useState14[1];
 
   var _useState15 = (0, _react.useState)(0),
       _useState16 = _slicedToArray(_useState15, 2),
-      buffer = _useState16[0],
-      setBuffer = _useState16[1];
+      progress = _useState16[0],
+      setProgress = _useState16[1];
 
-  var _useState17 = (0, _react.useState)(false),
+  var _useState17 = (0, _react.useState)(0),
       _useState18 = _slicedToArray(_useState17, 2),
-      bigPlay = _useState18[0],
-      setBigPlay = _useState18[1];
+      buffer = _useState18[0],
+      setBuffer = _useState18[1];
 
   var _useState19 = (0, _react.useState)(false),
       _useState20 = _slicedToArray(_useState19, 2),
-      loading = _useState20[0],
-      setLoading = _useState20[1];
+      bigPlay = _useState20[0],
+      setBigPlay = _useState20[1];
 
   var _useState21 = (0, _react.useState)(false),
       _useState22 = _slicedToArray(_useState21, 2),
-      activeFullscreen = _useState22[0],
-      setActiveFullscreen = _useState22[1];
+      loading = _useState22[0],
+      setLoading = _useState22[1];
+
+  var _useState23 = (0, _react.useState)(false),
+      _useState24 = _slicedToArray(_useState23, 2),
+      activeFullscreen = _useState24[0],
+      setActiveFullscreen = _useState24[1];
 
   var wrapper = (0, _react.useRef)();
   var video = (0, _react.useRef)();
   var velocities = ['0.25', '0.5', '0.75', '1', '1.25', '1.5', '1.75', '2'];
 
-  var _useState23 = (0, _react.useState)(false),
-      _useState24 = _slicedToArray(_useState23, 2),
-      showVelocity = _useState24[0],
-      setShowVelocity = _useState24[1];
-
-  var _useState25 = (0, _react.useState)('1'),
+  var _useState25 = (0, _react.useState)(false),
       _useState26 = _slicedToArray(_useState25, 2),
-      velocityActive = _useState26[0],
-      setVelocityActive = _useState26[1];
+      showVelocity = _useState26[0],
+      setShowVelocity = _useState26[1];
+
+  var _useState27 = (0, _react.useState)('1'),
+      _useState28 = _slicedToArray(_useState27, 2),
+      velocityActive = _useState28[0],
+      setVelocityActive = _useState28[1];
+
+  var _useState29 = (0, _react.useState)(false),
+      _useState30 = _slicedToArray(_useState29, 2),
+      menuLessonOpen = _useState30[0],
+      setMenuLessonOpen = _useState30[1];
+
+  var _useState31 = (0, _react.useState)(false),
+      _useState32 = _slicedToArray(_useState31, 2),
+      playlistOpen = _useState32[0],
+      setPlaylistOpen = _useState32[1];
+
+  var _useState33 = (0, _react.useState)(lessonActive),
+      _useState34 = _slicedToArray(_useState33, 2),
+      lessonActiveState = _useState34[0],
+      setLessonActiveState = _useState34[1];
 
   (0, _react.useEffect)(function () {
     var buffered = video.current.buffered;
@@ -128,6 +150,7 @@ function VideoPlayer(_ref) {
       if (outControls) {
         setShowControls(false);
         setShowVelocity(false);
+        setPlaylistOpen(false);
       }
     }, 3000);
     return function () {
@@ -151,6 +174,15 @@ function VideoPlayer(_ref) {
     }
 
     setShowVelocity(false);
+    setPlaylistOpen(false);
+  };
+
+  var clickInVideo = function clickInVideo() {
+    if (playlistOpen) {
+      setPlaylistOpen(false);
+    } else {
+      playAndPause();
+    }
   };
 
   var handleChangeProgressBar = function handleChangeProgressBar(_ref2) {
@@ -235,6 +267,31 @@ function VideoPlayer(_ref) {
     return setOutControls(false);
   };
 
+  var togglePlaylist = function togglePlaylist() {
+    return setPlaylistOpen(function (old) {
+      return !old;
+    });
+  };
+
+  var toogleMenuLesson = function toogleMenuLesson() {
+    return setMenuLessonOpen(function (old) {
+      return !old;
+    });
+  };
+
+  var changeLessonActive = function changeLessonActive(event) {
+    return setLessonActiveState(event.target.textContent);
+  };
+
+  var changeVideo = function changeVideo(event) {
+    var src = event.currentTarget.getAttribute('id');
+    var type = event.currentTarget.getAttribute('data-type');
+    setSourcesState({
+      src: src,
+      type: type
+    });
+  };
+
   var keys = {
     ' ': playAndPause,
     ArrowRight: function ArrowRight() {
@@ -309,22 +366,16 @@ function VideoPlayer(_ref) {
     onKeyUp: handleKeyUp,
     ref: wrapper
   }, /*#__PURE__*/_react.default.createElement(_styles.Video, {
-    poster: poster,
-    onClick: playAndPause,
+    onClick: clickInVideo,
     ref: video,
     onTimeUpdate: handleTimeUpdate,
     onLoadStart: handleLoadStart,
     onWaiting: handleWaiting,
-    onCanPlay: handleCanPlay
-  }, sources.map(function (_ref6) {
-    var src = _ref6.src,
-        type = _ref6.type;
-    return /*#__PURE__*/_react.default.createElement(_styles.Source, {
-      key: src,
-      src: src,
-      type: type
-    });
-  })), /*#__PURE__*/_react.default.createElement(_Loading.default, {
+    onCanPlay: handleCanPlay,
+    key: sourcesState.src,
+    src: sourcesState.src,
+    type: sourcesState.type
+  }), /*#__PURE__*/_react.default.createElement(_Loading.default, {
     active: loading
   }), /*#__PURE__*/_react.default.createElement(_styles.BigPlay, {
     active: bigPlay,
@@ -349,16 +400,36 @@ function VideoPlayer(_ref) {
     changeActiveVelocity: changeActiveVelocity,
     velocityActive: velocityActive,
     toggleVelocity: toggleVelocity,
-    velocities: velocities
+    velocities: velocities,
+    lessons: lessons,
+    lessonActive: lessonActiveState,
+    clickLesson: changeLessonActive,
+    playlistOpen: playlistOpen,
+    clickIconPlaylist: togglePlaylist,
+    menuOpen: menuLessonOpen,
+    clickMenuLesson: toogleMenuLesson,
+    clickVideo: changeVideo
   }));
 }
 
+var videos = _propTypes.default.arrayOf(_propTypes.default.shape({
+  poster: _propTypes.default.string.isRequired,
+  title: _propTypes.default.string.isRequired
+})).isRequired;
+
+var lesson = _propTypes.default.shape({
+  title: _propTypes.default.string.isRequired,
+  videos: videos
+});
+
 VideoPlayer.propTypes = {
   poster: _propTypes.default.string.isRequired,
-  sources: _propTypes.default.arrayOf(_propTypes.default.shape({
+  sources: _propTypes.default.shape({
     src: _propTypes.default.string.isRequired,
     type: _propTypes.default.string.isRequired
-  })).isRequired
+  }).isRequired,
+  lessons: _propTypes.default.arrayOf(lesson),
+  lessonActive: _propTypes.default.string
 };
 var _default = VideoPlayer;
 exports.default = _default;

@@ -201,12 +201,6 @@ Object.defineProperty(exports, "VideoPlayerProgressBar", {
     return _VideoPlayerProgressBar.default;
   }
 });
-Object.defineProperty(exports, "Settings", {
-  enumerable: true,
-  get: function get() {
-    return _Settings.default;
-  }
-});
 Object.defineProperty(exports, "Controls", {
   enumerable: true,
   get: function get() {
@@ -229,6 +223,18 @@ Object.defineProperty(exports, "PlaybackRate", {
   enumerable: true,
   get: function get() {
     return _PlaybackRate.default;
+  }
+});
+Object.defineProperty(exports, "Playlist", {
+  enumerable: true,
+  get: function get() {
+    return _Playlist.default;
+  }
+});
+Object.defineProperty(exports, "VideoDescription", {
+  enumerable: true,
+  get: function get() {
+    return _VideoDescription.default;
   }
 });
 
@@ -298,8 +304,6 @@ var _VideoPlayerTimer = _interopRequireDefault(require("./VideoPlayer/VideoPlaye
 
 var _VideoPlayerProgressBar = _interopRequireDefault(require("./VideoPlayer/VideoPlayerProgressBar"));
 
-var _Settings = _interopRequireDefault(require("./VideoPlayer/Settings"));
-
 var _Controls = _interopRequireDefault(require("./VideoPlayer/Controls"));
 
 var _Loading = _interopRequireDefault(require("./Loading"));
@@ -307,5 +311,9 @@ var _Loading = _interopRequireDefault(require("./Loading"));
 var _VideoPlayer = _interopRequireDefault(require("./VideoPlayer"));
 
 var _PlaybackRate = _interopRequireDefault(require("./VideoPlayer/PlaybackRate"));
+
+var _Playlist = _interopRequireDefault(require("./VideoPlayer/Playlist"));
+
+var _VideoDescription = _interopRequireDefault(require("./VideoPlayer/VideoDescription"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

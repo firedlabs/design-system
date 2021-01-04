@@ -132,6 +132,6 @@ var Image = _styledComponents.default.img(_templateObject7());
 
 exports.Image = Image;
 
-var BoxStyles = _styledComponents.default.article(_templateObject8(), _Tools.BoxShadow.medium, hasLight, hasImage, changeBorderColor, changeBackgroundColor);
+var BoxStyles = _styledComponents.default.article(_templateObject8(), _Tools.BoxShadow.medium, hasImage, changeBorderColor, changeBackgroundColor, hasLight);
 
 exports.BoxStyles = BoxStyles;

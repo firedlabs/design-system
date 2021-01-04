@@ -18,7 +18,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function ListActionImage(_ref) {
   var items = _ref.items,
       size = _ref.size;
-  console.log('size', size);
   return /*#__PURE__*/_react.default.createElement(_styles.default, null, items.map(function (_ref2) {
     var href = _ref2.href,
         src = _ref2.src,
