@@ -12,6 +12,7 @@ export const CoverStyle = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 
   & > ${ProgressBarStyle} {
     border-top: none;
