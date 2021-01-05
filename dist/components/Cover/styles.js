@@ -14,7 +14,7 @@ var _styles = _interopRequireDefault(require("../ProgressBar/styles"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n\n  & > ", " {\n    border-top: none;\n    width: 68.5%;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n\n  & > ", " {\n    border-top: none;\n    width: 68.5%;\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
