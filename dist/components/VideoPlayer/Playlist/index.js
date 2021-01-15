@@ -30,12 +30,13 @@ function Playlist(_ref) {
     open: menuOpen,
     onClick: clickMenuLesson
   }, lessons.map(function (_ref2) {
-    var title = _ref2.title;
+    var title = _ref2.title,
+        tag = _ref2.tag;
     return /*#__PURE__*/_react.default.createElement(_styles.Lesson, {
       key: title,
       active: title === lessonActive,
       onClick: clickLesson
-    }, title);
+    }, title, " ", tag);
   })), /*#__PURE__*/_react.default.createElement(_styles.VideosLesson, null, lessons.map(function (_ref3) {
     var title = _ref3.title,
         videos = _ref3.videos;

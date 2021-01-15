@@ -12,7 +12,7 @@ var _Tools = require("../../Styles/Tools");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  ", ";\n  display: flex;\n  flex-direction: column;\n  margin-bottom: var(--gap-small);\n"]);
+  var data = _taggedTemplateLiteral(["\n  ", ";\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  margin-bottom: var(--gap-small);\n  width: 100%;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -22,7 +22,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  ", ";\n  background-color: var(--color-third);\n  color: var(--color-black-first);\n  padding: var(--gap-small);\n  border: none;\n"]);
+  var data = _taggedTemplateLiteral(["\n  ", ";\n  box-sizing: border-box;\n  background-color: var(--color-third);\n  color: var(--color-black-first);\n  padding: var(--gap-small);\n  border: none;\n  width: 100%;\n\n  &:read-only {\n    background-color: var(--color-black-fourth);\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
