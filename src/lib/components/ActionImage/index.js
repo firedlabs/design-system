@@ -10,7 +10,8 @@ function ActionImage({
   backgroundColor,
   size,
   isPadding,
-  boxShadow
+  boxShadow,
+  as
 }) {
   return (
     <ActionImageStyle
@@ -19,6 +20,7 @@ function ActionImage({
       size={size}
       isPadding={isPadding}
       boxShadow={boxShadow}
+      as={as}
     >
       <Image src={src} alt={alt} />
     </ActionImageStyle>
@@ -26,20 +28,23 @@ function ActionImage({
 }
 
 ActionImage.defaultProps = {
+  href: '#',
   backgroundColor: palette.colorFirst,
   size: 'small',
   isPadding: true,
-  boxShadow: false
+  boxShadow: false,
+  as: 'a'
 }
 
 ActionImage.propTypes = {
-  href: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
+  href: PropTypes.string,
   isPadding: PropTypes.bool,
   backgroundColor: PropTypes.string,
   size: PropTypes.string,
-  boxShadow: PropTypes.oneOfType([PropTypes.string, PropTypes.bool])
+  boxShadow: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  as: PropTypes.string
 }
 
 export default ActionImage
