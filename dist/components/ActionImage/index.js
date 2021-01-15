@@ -23,14 +23,16 @@ function ActionImage(_ref) {
       size = _ref.size,
       isPadding = _ref.isPadding,
       boxShadow = _ref.boxShadow,
-      as = _ref.as;
+      as = _ref.as,
+      to = _ref.to;
   return /*#__PURE__*/_react.default.createElement(_styles.ActionImageStyle, {
     href: href,
     backgroundColor: backgroundColor,
     size: size,
     isPadding: isPadding,
     boxShadow: boxShadow,
-    as: as
+    as: as,
+    to: to
   }, /*#__PURE__*/_react.default.createElement(_styles.Image, {
     src: src,
     alt: alt
@@ -43,7 +45,8 @@ ActionImage.defaultProps = {
   size: 'small',
   isPadding: true,
   boxShadow: false,
-  as: 'a'
+  as: 'a',
+  to: ''
 };
 ActionImage.propTypes = {
   src: _propTypes.default.string.isRequired,
@@ -53,7 +56,8 @@ ActionImage.propTypes = {
   backgroundColor: _propTypes.default.string,
   size: _propTypes.default.string,
   boxShadow: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.bool]),
-  as: _propTypes.default.string
+  as: _propTypes.default.string,
+  to: _propTypes.default.string
 };
 var _default = ActionImage;
 exports.default = _default;
