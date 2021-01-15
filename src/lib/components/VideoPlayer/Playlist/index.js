@@ -26,13 +26,13 @@ function Playlist({
     <PlaylistStyle>
       <WrapperLesson playlistOpen={playlistOpen}>
         <MenuLesson open={menuOpen} onClick={clickMenuLesson}>
-          {lessons.map(({ title }) => (
+          {lessons.map(({ title, tag }) => (
             <Lesson
               key={title}
               active={title === lessonActive}
               onClick={clickLesson}
             >
-              {title}
+              {title} {tag}
             </Lesson>
           ))}
         </MenuLesson>

@@ -32,6 +32,7 @@ WithPlaylist.args = {
   lessons: [
     {
       title: 'Aula 00',
+      tag: '',
       videos: [
         {
           src:
@@ -79,6 +80,32 @@ WithPlaylist.args = {
           src:
             'https://player.vimeo.com/external/490349849.hd.mp4?s=5a01556b0267414d24988bcff741c7da270c7df4&profile_id=175',
           title: 'Desafios top top top',
+          poster: 'https://i.vimeocdn.com/video/1027992089.jpg',
+          type: 'video/mp4'
+        }
+      ]
+    },
+    {
+      title: 'Aula 01',
+      tag: 'nova',
+      videos: [
+        {
+          src:
+            'https://player.vimeo.com/external/490348141.hd.mp4?s=e473c83ba63929f71334bd4167fcf8be3fd59930&profile_id=175',
+          title: 'Projeto do curso',
+          poster: 'https://i.vimeocdn.com/video/1027992089.jpg',
+          type: 'video/mp4'
+        }
+      ]
+    },
+    {
+      title: 'Aula 02',
+      tag: '10/02/2021',
+      videos: [
+        {
+          src:
+            'https://player.vimeo.com/external/490348141.hd.mp4?s=e473c83ba63929f71334bd4167fcf8be3fd59930&profile_id=175',
+          title: 'Vídeos será liberado no dia 10/02/2021',
           poster: 'https://i.vimeocdn.com/video/1027992089.jpg',
           type: 'video/mp4'
         }
