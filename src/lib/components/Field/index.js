@@ -1,7 +1,9 @@
 import Email from './Email'
+import Text from './Text'
 
 const Field = {
-  Email
+  Email,
+  Text
 }
 
 export default Field
