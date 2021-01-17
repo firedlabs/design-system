@@ -20,5 +20,9 @@ const children = (
 
 export const Default = Template.bind({})
 Default.args = {
-  children
+  children,
+  small: true,
+  medium: false,
+  big: false,
+  biggest: false
 }
