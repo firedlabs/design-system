@@ -49,6 +49,7 @@ function VideoPlayer({ poster, sources, lessons, lessonActive }) {
         setShowControls(false)
         setShowVelocity(false)
         setPlaylistOpen(false)
+        setMenuLessonOpen(false)
       }
     }, 3000)
 
@@ -71,11 +72,13 @@ function VideoPlayer({ poster, sources, lessons, lessonActive }) {
     }
     setShowVelocity(false)
     setPlaylistOpen(false)
+    setMenuLessonOpen(false)
   }
 
   const clickInVideo = () => {
     if (playlistOpen) {
       setPlaylistOpen(false)
+      setMenuLessonOpen(false)
     } else {
       playAndPause()
     }
@@ -153,8 +156,13 @@ function VideoPlayer({ poster, sources, lessons, lessonActive }) {
 
   const togglePlaylist = () => setPlaylistOpen((old) => !old)
   const toogleMenuLesson = () => setMenuLessonOpen((old) => !old)
-  const changeLessonActive = (event) =>
-    setLessonActiveState(event.target.textContent)
+  const changeLessonActive = (event) => {
+    if (menuLessonOpen) {
+      const module = event.target.getAttribute('data-ref')
+
+      setLessonActiveState(module)
+    }
+  }
   const changeVideo = (event) => {
     const src = event.currentTarget.getAttribute('id')
     const type = event.currentTarget.getAttribute('data-type')

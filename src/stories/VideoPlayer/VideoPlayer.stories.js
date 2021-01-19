@@ -31,7 +31,7 @@ WithPlaylist.args = {
     'https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217',
   lessons: [
     {
-      title: 'Aula 00',
+      title: 'Módulo 00',
       tag: '',
       videos: [
         {
@@ -86,7 +86,7 @@ WithPlaylist.args = {
       ]
     },
     {
-      title: 'Aula 01',
+      title: 'Módulo 01',
       tag: 'nova',
       videos: [
         {
@@ -99,7 +99,7 @@ WithPlaylist.args = {
       ]
     },
     {
-      title: 'Aula 02',
+      title: 'Módulo 02',
       tag: '10/02/2021',
       videos: [
         {
@@ -112,5 +112,5 @@ WithPlaylist.args = {
       ]
     }
   ],
-  lessonActive: 'Aula 00'
+  lessonActive: 'Módulo 01'
 }

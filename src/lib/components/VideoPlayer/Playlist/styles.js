@@ -2,8 +2,15 @@ import styled, { css } from 'styled-components'
 import { transparentize } from 'polished'
 import { IconPlayer, IconPlayerWrapper } from '../IconPlayer'
 import { palette } from '../../../Styles/Settings/Colors/palette'
-import { Cursor, Subtitle } from '../../../Styles/Tools'
+import { Caption, Cursor, Subtitle } from '../../../Styles/Tools'
 import { VideoDescriptionStyle } from '../VideoDescription/styles'
+
+export const Tag = styled.div`
+  ${Caption};
+  margin-left: var(--gap-small);
+  background-color: var(--color-second);
+  padding: calc(var(--gap-smallest) / 2);
+`
 
 export const PlaylistIcon = styled(IconPlayer).attrs({
   icon: 'playlist'

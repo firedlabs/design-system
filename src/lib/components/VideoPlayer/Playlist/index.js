@@ -9,7 +9,8 @@ import {
   PlaylistIcon,
   MenuLesson,
   Videos,
-  VideosLesson
+  VideosLesson,
+  Tag
 } from './styles'
 
 function Playlist({
@@ -31,8 +32,10 @@ function Playlist({
               key={title}
               active={title === lessonActive}
               onClick={clickLesson}
+              data-ref={title}
             >
-              {title} {tag}
+              {title}
+              {tag && <Tag data-ref={title}>{tag}</Tag>}
             </Lesson>
           ))}
         </MenuLesson>
