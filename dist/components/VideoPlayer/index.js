@@ -151,6 +151,7 @@ function VideoPlayer(_ref) {
         setShowControls(false);
         setShowVelocity(false);
         setPlaylistOpen(false);
+        setMenuLessonOpen(false);
       }
     }, 3000);
     return function () {
@@ -175,11 +176,13 @@ function VideoPlayer(_ref) {
 
     setShowVelocity(false);
     setPlaylistOpen(false);
+    setMenuLessonOpen(false);
   };
 
   var clickInVideo = function clickInVideo() {
     if (playlistOpen) {
       setPlaylistOpen(false);
+      setMenuLessonOpen(false);
     } else {
       playAndPause();
     }
@@ -280,7 +283,10 @@ function VideoPlayer(_ref) {
   };
 
   var changeLessonActive = function changeLessonActive(event) {
-    return setLessonActiveState(event.target.textContent);
+    if (menuLessonOpen) {
+      var module = event.target.getAttribute('data-ref');
+      setLessonActiveState(module);
+    }
   };
 
   var changeVideo = function changeVideo(event) {

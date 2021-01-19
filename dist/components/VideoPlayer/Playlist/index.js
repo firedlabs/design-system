@@ -35,8 +35,11 @@ function Playlist(_ref) {
     return /*#__PURE__*/_react.default.createElement(_styles.Lesson, {
       key: title,
       active: title === lessonActive,
-      onClick: clickLesson
-    }, title, " ", tag);
+      onClick: clickLesson,
+      "data-ref": title
+    }, title, tag && /*#__PURE__*/_react.default.createElement(_styles.Tag, {
+      "data-ref": title
+    }, tag));
   })), /*#__PURE__*/_react.default.createElement(_styles.VideosLesson, null, lessons.map(function (_ref3) {
     var title = _ref3.title,
         videos = _ref3.videos;
