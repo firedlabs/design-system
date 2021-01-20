@@ -286,9 +286,9 @@ function VideoPlayer(_ref) {
     });
   };
 
-  var handleClickLesson = function handleClickLesson() {
+  var handleClickLesson = function handleClickLesson(event) {
     if (menuLessonOpen) {
-      changeLessonActive();
+      changeLessonActive(event);
     }
   };
 
