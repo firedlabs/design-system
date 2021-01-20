@@ -4,7 +4,7 @@ import Loading from '../Loading'
 import Controls from './Controls'
 import { BigPlay, Video, Wrapper } from './styles'
 
-function VideoPlayer({ poster, sources, lessons, lessonActive }) {
+function VideoPlayer({ sources, lessons, lessonActive, changeLessonActive }) {
   const [sourcesState, setSourcesState] = useState(sources)
   const [showControls, setShowControls] = useState(false)
   const [outControls, setOutControls] = useState(true)
@@ -26,7 +26,6 @@ function VideoPlayer({ poster, sources, lessons, lessonActive }) {
 
   const [menuLessonOpen, setMenuLessonOpen] = useState(false)
   const [playlistOpen, setPlaylistOpen] = useState(false)
-  const [lessonActiveState, setLessonActiveState] = useState(lessonActive)
 
   useEffect(() => {
     const { buffered } = video.current
@@ -156,13 +155,7 @@ function VideoPlayer({ poster, sources, lessons, lessonActive }) {
 
   const togglePlaylist = () => setPlaylistOpen((old) => !old)
   const toogleMenuLesson = () => setMenuLessonOpen((old) => !old)
-  const changeLessonActive = (event) => {
-    if (menuLessonOpen) {
-      const module = event.target.getAttribute('data-ref')
 
-      setLessonActiveState(module)
-    }
-  }
   const changeVideo = (event) => {
     const src = event.currentTarget.getAttribute('id')
     const type = event.currentTarget.getAttribute('data-type')
@@ -171,6 +164,12 @@ function VideoPlayer({ poster, sources, lessons, lessonActive }) {
       src,
       type
     })
+  }
+
+  const handleClickLesson = () => {
+    if (menuLessonOpen) {
+      changeLessonActive()
+    }
   }
 
   const keys = {
@@ -274,8 +273,8 @@ function VideoPlayer({ poster, sources, lessons, lessonActive }) {
         toggleVelocity={toggleVelocity}
         velocities={velocities}
         lessons={lessons}
-        lessonActive={lessonActiveState}
-        clickLesson={changeLessonActive}
+        lessonActive={lessonActive}
+        clickLesson={handleClickLesson}
         playlistOpen={playlistOpen}
         clickIconPlaylist={togglePlaylist}
         menuOpen={menuLessonOpen}
@@ -299,13 +298,13 @@ const lesson = PropTypes.shape({
 })
 
 VideoPlayer.propTypes = {
-  poster: PropTypes.string.isRequired,
   sources: PropTypes.shape({
     src: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired
   }).isRequired,
-  lessons: PropTypes.arrayOf(lesson),
-  lessonActive: PropTypes.string
+  changeLessonActive: PropTypes.func.isRequired,
+  lessons: PropTypes.arrayOf(lesson).isRequired,
+  lessonActive: PropTypes.string.isRequired
 }
 
 export default VideoPlayer
