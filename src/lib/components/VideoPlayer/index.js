@@ -166,9 +166,9 @@ function VideoPlayer({ sources, lessons, lessonActive, changeLessonActive }) {
     })
   }
 
-  const handleClickLesson = () => {
+  const handleClickLesson = (event) => {
     if (menuLessonOpen) {
-      changeLessonActive()
+      changeLessonActive(event)
     }
   }
 
