@@ -36,10 +36,10 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function VideoPlayer(_ref) {
-  var poster = _ref.poster,
-      sources = _ref.sources,
+  var sources = _ref.sources,
       lessons = _ref.lessons,
-      lessonActive = _ref.lessonActive;
+      lessonActive = _ref.lessonActive,
+      changeLessonActive = _ref.changeLessonActive;
 
   var _useState = (0, _react.useState)(sources),
       _useState2 = _slicedToArray(_useState, 2),
@@ -124,11 +124,6 @@ function VideoPlayer(_ref) {
       _useState32 = _slicedToArray(_useState31, 2),
       playlistOpen = _useState32[0],
       setPlaylistOpen = _useState32[1];
-
-  var _useState33 = (0, _react.useState)(lessonActive),
-      _useState34 = _slicedToArray(_useState33, 2),
-      lessonActiveState = _useState34[0],
-      setLessonActiveState = _useState34[1];
 
   (0, _react.useEffect)(function () {
     var buffered = video.current.buffered;
@@ -282,13 +277,6 @@ function VideoPlayer(_ref) {
     });
   };
 
-  var changeLessonActive = function changeLessonActive(event) {
-    if (menuLessonOpen) {
-      var module = event.target.getAttribute('data-ref');
-      setLessonActiveState(module);
-    }
-  };
-
   var changeVideo = function changeVideo(event) {
     var src = event.currentTarget.getAttribute('id');
     var type = event.currentTarget.getAttribute('data-type');
@@ -296,6 +284,12 @@ function VideoPlayer(_ref) {
       src: src,
       type: type
     });
+  };
+
+  var handleClickLesson = function handleClickLesson() {
+    if (menuLessonOpen) {
+      changeLessonActive();
+    }
   };
 
   var keys = {
@@ -408,8 +402,8 @@ function VideoPlayer(_ref) {
     toggleVelocity: toggleVelocity,
     velocities: velocities,
     lessons: lessons,
-    lessonActive: lessonActiveState,
-    clickLesson: changeLessonActive,
+    lessonActive: lessonActive,
+    clickLesson: handleClickLesson,
     playlistOpen: playlistOpen,
     clickIconPlaylist: togglePlaylist,
     menuOpen: menuLessonOpen,
@@ -429,13 +423,13 @@ var lesson = _propTypes.default.shape({
 });
 
 VideoPlayer.propTypes = {
-  poster: _propTypes.default.string.isRequired,
   sources: _propTypes.default.shape({
     src: _propTypes.default.string.isRequired,
     type: _propTypes.default.string.isRequired
   }).isRequired,
-  lessons: _propTypes.default.arrayOf(lesson),
-  lessonActive: _propTypes.default.string
+  changeLessonActive: _propTypes.default.func.isRequired,
+  lessons: _propTypes.default.arrayOf(lesson).isRequired,
+  lessonActive: _propTypes.default.string.isRequired
 };
 var _default = VideoPlayer;
 exports.default = _default;
