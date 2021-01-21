@@ -1,10 +1,10 @@
-"use strict";
+'use strict'
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, '__esModule', {
   value: true
-});
-exports.palette = void 0;
-var palette = {
+})
+exports.palette = void 0
+const palette = {
   colorFirst: '#F25A70',
   colorSecond: '#7C5E99',
   colorThird: '#FFF',
@@ -15,5 +15,5 @@ var palette = {
   colorError: '#BA1F33',
   colorWarning: '#CEB02A',
   colorSuccess: '#62C370'
-};
-exports.palette = palette;
+}
+exports.palette = palette

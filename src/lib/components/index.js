@@ -38,6 +38,7 @@ import PlaybackRate from './VideoPlayer/PlaybackRate'
 import Playlist from './VideoPlayer/Playlist'
 import VideoDescription from './VideoPlayer/VideoDescription'
 import ActionCard from './ActionCard'
+import Table from './Table'
 
 export {
   Button,
@@ -79,5 +80,6 @@ export {
   PlaybackRate,
   Playlist,
   VideoDescription,
-  ActionCard
+  ActionCard,
+  Table
 }
