@@ -243,6 +243,12 @@ Object.defineProperty(exports, "ActionCard", {
     return _ActionCard.default;
   }
 });
+Object.defineProperty(exports, "Table", {
+  enumerable: true,
+  get: function get() {
+    return _Table.default;
+  }
+});
 
 var _Button = _interopRequireDefault(require("./Button"));
 
@@ -323,5 +329,7 @@ var _Playlist = _interopRequireDefault(require("./VideoPlayer/Playlist"));
 var _VideoDescription = _interopRequireDefault(require("./VideoPlayer/VideoDescription"));
 
 var _ActionCard = _interopRequireDefault(require("./ActionCard"));
+
+var _Table = _interopRequireDefault(require("./Table"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
