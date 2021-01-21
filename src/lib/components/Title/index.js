@@ -31,6 +31,12 @@ const hasBiggest = ({ biggest }) =>
     margin-bottom: var(--gap-biggest);
   `
 
+const hasCenter = () => ({ center }) =>
+  center &&
+  css`
+    text-align: center;
+  `
+
 const Title = styled.h2`
   ${toolsTitle};
   color: var(--color-third);
@@ -41,6 +47,7 @@ const Title = styled.h2`
   ${hasMedium};
   ${hasBig};
   ${hasBiggest};
+  ${hasCenter}
 `
 
 export default Title

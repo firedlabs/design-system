@@ -15,7 +15,8 @@ Default.args = {
   small: true,
   medium: false,
   big: false,
-  biggest: false
+  biggest: false,
+  center: false
 }
 
 export const Dark = Template.bind({})
@@ -25,7 +26,8 @@ Dark.args = {
   small: true,
   medium: false,
   big: false,
-  biggest: false
+  biggest: false,
+  center: false
 }
 
 export const Small = Template.bind({})
@@ -35,7 +37,8 @@ Small.args = {
   small: true,
   medium: false,
   big: false,
-  biggest: false
+  biggest: false,
+  center: false
 }
 
 export const Medium = Template.bind({})
@@ -45,7 +48,8 @@ Medium.args = {
   small: false,
   medium: true,
   big: false,
-  biggest: false
+  biggest: false,
+  center: false
 }
 
 export const Big = Template.bind({})
@@ -55,7 +59,8 @@ Big.args = {
   small: false,
   medium: false,
   big: true,
-  biggest: false
+  biggest: false,
+  center: false
 }
 
 export const Biggest = Template.bind({})
@@ -65,5 +70,6 @@ Biggest.args = {
   small: false,
   medium: false,
   big: false,
-  biggest: true
+  biggest: true,
+  center: false
 }
