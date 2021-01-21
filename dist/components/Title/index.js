@@ -15,8 +15,18 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+function _templateObject7() {
+  var data = _taggedTemplateLiteral(["\n  ", ";\n  color: var(--color-third);\n  margin-bottom: var(--gap-smallest);\n\n  ", ";\n  ", ";\n  ", ";\n  ", ";\n  ", ";\n  ", "\n"]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  ", ";\n  color: var(--color-third);\n  margin-bottom: var(--gap-smallest);\n\n  ", ";\n  ", ";\n  ", ";\n  ", ";\n  ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n    text-align: center;\n  "]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -102,7 +112,14 @@ var hasBiggest = function hasBiggest(_ref5) {
   return biggest && (0, _styledComponents.css)(_templateObject5());
 };
 
-var Title = _styledComponents.default.h2(_templateObject6(), _index.Title, hasDark, hasSmall, hasMedium, hasBig, hasBiggest);
+var hasCenter = function hasCenter() {
+  return function (_ref6) {
+    var center = _ref6.center;
+    return center && (0, _styledComponents.css)(_templateObject6());
+  };
+};
+
+var Title = _styledComponents.default.h2(_templateObject7(), _index.Title, hasDark, hasSmall, hasMedium, hasBig, hasBiggest, hasCenter);
 
 var _default = Title;
 exports.default = _default;
