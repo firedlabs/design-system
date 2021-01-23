@@ -22,7 +22,7 @@ function Table(_ref) {
       data = _ref.data;
 
   var isProfile = function isProfile(dataParam) {
-    return /\.png|\.jpg$/.test(dataParam) && /*#__PURE__*/_react.default.createElement(_Image.default, {
+    return /\.png|\.jpg|\.jpeg$/.test(dataParam) && /*#__PURE__*/_react.default.createElement(_Image.default, {
       src: dataParam,
       alt: "Avatar do usu\xE1rio"
     });
