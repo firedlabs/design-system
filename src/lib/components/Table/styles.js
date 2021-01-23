@@ -59,6 +59,5 @@ export const TableHead = styled.thead`
 
 export const TableStyle = styled(BoxStyles).attrs({ as: 'table' })`
   width: 90vw;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto var(--gap-big);
 `
