@@ -13,7 +13,7 @@ import {
 
 function Table({ columns, data }) {
   const isProfile = (dataParam) =>
-    /\.png|\.jpg$/.test(dataParam) && (
+    /\.png|\.jpg|\.jpeg$/.test(dataParam) && (
       <Image src={dataParam} alt="Avatar do usuário" />
     )
 
