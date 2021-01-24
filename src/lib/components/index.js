@@ -39,6 +39,7 @@ import Playlist from './VideoPlayer/Playlist'
 import VideoDescription from './VideoPlayer/VideoDescription'
 import ActionCard from './ActionCard'
 import Table from './Table'
+import FloatingButton from './FloatingButton'
 
 export {
   Button,
@@ -81,5 +82,6 @@ export {
   Playlist,
   VideoDescription,
   ActionCard,
-  Table
+  Table,
+  FloatingButton
 }
