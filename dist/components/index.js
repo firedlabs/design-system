@@ -249,6 +249,12 @@ Object.defineProperty(exports, "Table", {
     return _Table.default;
   }
 });
+Object.defineProperty(exports, "FloatingButton", {
+  enumerable: true,
+  get: function get() {
+    return _FloatingButton.default;
+  }
+});
 
 var _Button = _interopRequireDefault(require("./Button"));
 
@@ -331,5 +337,7 @@ var _VideoDescription = _interopRequireDefault(require("./VideoPlayer/VideoDescr
 var _ActionCard = _interopRequireDefault(require("./ActionCard"));
 
 var _Table = _interopRequireDefault(require("./Table"));
+
+var _FloatingButton = _interopRequireDefault(require("./FloatingButton"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
