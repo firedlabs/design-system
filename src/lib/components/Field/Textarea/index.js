@@ -1,37 +1,37 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Label, Content, Input } from '../styles'
+import { Content, Label } from '../styles'
+import { TextareaStyles } from './styles'
 
-function Text({ value, type, label, placeholder, readOnly, onChange }) {
+function Textarea({ value, label, placeholder, readOnly, onChange }) {
   return (
     <Label>
       <Content>{label}</Content>
-      <Input
+      <TextareaStyles
         value={value}
-        type={type}
         placeholder={placeholder}
         readOnly={readOnly}
-      />
+      >
+        {value}
+      </TextareaStyles>
     </Label>
   )
 }
 
-Text.defaultProps = {
+Textarea.defaultProps = {
   value: '',
-  type: 'text',
   label: '',
   placeholder: '',
   readOnly: false,
   onChange: () => {}
 }
 
-Text.propTypes = {
+Textarea.propTypes = {
   value: PropTypes.string,
-  type: PropTypes.string,
   label: PropTypes.string,
   placeholder: PropTypes.string,
   readOnly: PropTypes.bool,
   onChange: PropTypes.func
 }
 
-export default Text
+export default Textarea
