@@ -16,7 +16,7 @@ var _Image = _interopRequireDefault(require("../Image"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  width: 90vw;\n  margin-left: auto;\n  margin-right: auto;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 90vw;\n  margin: 0 auto var(--gap-big);\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
