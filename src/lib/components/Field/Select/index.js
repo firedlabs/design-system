@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 import { Label, Content } from '../styles'
 import { Option, SelectStyle } from './styles'
 
-function Select({ name, label, options, register }) {
+function Select({ name, label, value, defaultValue, options, register }) {
   return (
     <Label>
       <Content>{label}</Content>
-      <SelectStyle name={name} ref={register()}>
+      <SelectStyle name={name} ref={register()} value={value || defaultValue}>
         {options.map((option) => (
           <Option key={option} value={option}>
             {option}
@@ -20,6 +20,8 @@ function Select({ name, label, options, register }) {
 
 Select.defaultProps = {
   label: '',
+  value: '',
+  defaultValue: '',
   name: '',
   options: [''],
   register: () => {}
@@ -28,6 +30,8 @@ Select.defaultProps = {
 Select.propTypes = {
   label: PropTypes.string,
   name: PropTypes.string,
+  value: PropTypes.string,
+  defaultValue: PropTypes.string,
   options: PropTypes.arrayOf(PropTypes.string),
   register: PropTypes.func
 }
