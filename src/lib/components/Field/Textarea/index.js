@@ -22,6 +22,7 @@ function Textarea({ value, label, placeholder, readOnly, onChange, register }) {
 
 Textarea.defaultProps = {
   value: '',
+  name: '',
   label: '',
   placeholder: '',
   readOnly: false,
@@ -31,6 +32,7 @@ Textarea.defaultProps = {
 
 Textarea.propTypes = {
   value: PropTypes.string,
+  name: PropTypes.string,
   label: PropTypes.string,
   placeholder: PropTypes.string,
   readOnly: PropTypes.bool,

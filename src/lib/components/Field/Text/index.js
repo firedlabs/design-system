@@ -4,6 +4,7 @@ import { Label, Content, Input } from '../styles'
 
 function Text({
   value,
+  name,
   type,
   label,
   placeholder,
@@ -16,6 +17,7 @@ function Text({
       <Content>{label}</Content>
       <Input
         value={value}
+        name={name}
         type={type}
         placeholder={placeholder}
         readOnly={readOnly}
@@ -28,6 +30,7 @@ function Text({
 
 Text.defaultProps = {
   value: '',
+  name: '',
   type: 'text',
   label: '',
   placeholder: '',
@@ -38,6 +41,7 @@ Text.defaultProps = {
 
 Text.propTypes = {
   value: PropTypes.string,
+  name: PropTypes.string,
   type: PropTypes.string,
   label: PropTypes.string,
   placeholder: PropTypes.string,

@@ -2,13 +2,22 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Label, Content, Input } from '../styles'
 
-function Email({ value, label, placeholder, readOnly, onChange, register }) {
+function Email({
+  value,
+  name,
+  label,
+  placeholder,
+  readOnly,
+  onChange,
+  register
+}) {
   return (
     <Label>
       <Content>{label}</Content>
       <Input
         value={value}
         type="email"
+        name={name}
         placeholder={placeholder}
         readOnly={readOnly}
         onChange={onChange}
@@ -20,6 +29,7 @@ function Email({ value, label, placeholder, readOnly, onChange, register }) {
 
 Email.defaultProps = {
   label: 'Email',
+  name: 'email',
   placeholder: 'seu_email@gmail.com',
   readOnly: false,
   value: '',
@@ -29,6 +39,7 @@ Email.defaultProps = {
 
 Email.propTypes = {
   label: PropTypes.string,
+  name: PropTypes.string,
   placeholder: PropTypes.string,
   readOnly: PropTypes.string,
   value: PropTypes.string,
