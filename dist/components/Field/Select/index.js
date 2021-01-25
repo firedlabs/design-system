@@ -22,7 +22,7 @@ function Select(_ref) {
       register = _ref.register;
   return /*#__PURE__*/_react.default.createElement(_styles.Label, null, /*#__PURE__*/_react.default.createElement(_styles.Content, null, label), /*#__PURE__*/_react.default.createElement(_styles2.SelectStyle, {
     name: name,
-    ref: register
+    ref: register()
   }, options.map(function (option) {
     return /*#__PURE__*/_react.default.createElement(_styles2.Option, {
       key: option,
