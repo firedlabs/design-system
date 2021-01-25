@@ -15,6 +15,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function Email(_ref) {
   var value = _ref.value,
+      name = _ref.name,
       label = _ref.label,
       placeholder = _ref.placeholder,
       readOnly = _ref.readOnly,
@@ -23,6 +24,7 @@ function Email(_ref) {
   return /*#__PURE__*/_react.default.createElement(_styles.Label, null, /*#__PURE__*/_react.default.createElement(_styles.Content, null, label), /*#__PURE__*/_react.default.createElement(_styles.Input, {
     value: value,
     type: "email",
+    name: name,
     placeholder: placeholder,
     readOnly: readOnly,
     onChange: onChange,
@@ -32,6 +34,7 @@ function Email(_ref) {
 
 Email.defaultProps = {
   label: 'Email',
+  name: 'email',
   placeholder: 'seu_email@gmail.com',
   readOnly: false,
   value: '',
@@ -40,6 +43,7 @@ Email.defaultProps = {
 };
 Email.propTypes = {
   label: _propTypes.default.string,
+  name: _propTypes.default.string,
   placeholder: _propTypes.default.string,
   readOnly: _propTypes.default.string,
   value: _propTypes.default.string,

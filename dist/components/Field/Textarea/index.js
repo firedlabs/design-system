@@ -33,6 +33,7 @@ function Textarea(_ref) {
 
 Textarea.defaultProps = {
   value: '',
+  name: '',
   label: '',
   placeholder: '',
   readOnly: false,
@@ -41,6 +42,7 @@ Textarea.defaultProps = {
 };
 Textarea.propTypes = {
   value: _propTypes.default.string,
+  name: _propTypes.default.string,
   label: _propTypes.default.string,
   placeholder: _propTypes.default.string,
   readOnly: _propTypes.default.bool,
