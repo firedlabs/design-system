@@ -44,8 +44,7 @@ function Box(_ref) {
     light: light,
     image: isImage,
     borderColor: borderColor,
-    backgroundColor: backgroundColor,
-    onSubmit: onSubmit
+    backgroundColor: backgroundColor
   }, hasContent() || hasImage());
 }
 
@@ -56,8 +55,7 @@ Box.defaultProps = {
   src: false,
   alt: false,
   borderColor: 'colorThird',
-  backgroundColor: 'colorBlackSecond',
-  onSubmit: function onSubmit() {}
+  backgroundColor: 'colorBlackSecond'
 };
 Box.propTypes = {
   as: _propTypes.default.string,
@@ -67,8 +65,7 @@ Box.propTypes = {
   alt: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.bool]),
   borderColor: _propTypes.default.string,
   backgroundColor: _propTypes.default.string,
-  color: _propTypes.default.string,
-  onSubmit: _propTypes.default.func
+  color: _propTypes.default.string
 };
 var _default = Box;
 exports.default = _default;
