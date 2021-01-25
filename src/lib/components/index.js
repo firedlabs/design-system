@@ -40,6 +40,7 @@ import VideoDescription from './VideoPlayer/VideoDescription'
 import ActionCard from './ActionCard'
 import Table from './Table'
 import FloatingButton from './FloatingButton'
+import Form from './Form'
 
 export {
   Button,
@@ -83,5 +84,6 @@ export {
   VideoDescription,
   ActionCard,
   Table,
-  FloatingButton
+  FloatingButton,
+  Form
 }

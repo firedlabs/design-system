@@ -26,7 +26,6 @@ function Box({
       image={isImage}
       borderColor={borderColor}
       backgroundColor={backgroundColor}
-      onSubmit={onSubmit}
     >
       {hasContent() || hasImage()}
     </BoxStyles>
@@ -40,8 +39,7 @@ Box.defaultProps = {
   src: false,
   alt: false,
   borderColor: 'colorThird',
-  backgroundColor: 'colorBlackSecond',
-  onSubmit: () => {}
+  backgroundColor: 'colorBlackSecond'
 }
 
 Box.propTypes = {
@@ -52,8 +50,7 @@ Box.propTypes = {
   alt: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   borderColor: PropTypes.string,
   backgroundColor: PropTypes.string,
-  color: PropTypes.string,
-  onSubmit: PropTypes.func
+  color: PropTypes.string
 }
 
 export default Box
