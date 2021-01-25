@@ -18,11 +18,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function Select(_ref) {
   var name = _ref.name,
       label = _ref.label,
+      value = _ref.value,
+      defaultValue = _ref.defaultValue,
       options = _ref.options,
       register = _ref.register;
   return /*#__PURE__*/_react.default.createElement(_styles.Label, null, /*#__PURE__*/_react.default.createElement(_styles.Content, null, label), /*#__PURE__*/_react.default.createElement(_styles2.SelectStyle, {
     name: name,
-    ref: register()
+    ref: register(),
+    value: value || defaultValue
   }, options.map(function (option) {
     return /*#__PURE__*/_react.default.createElement(_styles2.Option, {
       key: option,
@@ -33,6 +36,8 @@ function Select(_ref) {
 
 Select.defaultProps = {
   label: '',
+  value: '',
+  defaultValue: '',
   name: '',
   options: [''],
   register: function register() {}
@@ -40,6 +45,8 @@ Select.defaultProps = {
 Select.propTypes = {
   label: _propTypes.default.string,
   name: _propTypes.default.string,
+  value: _propTypes.default.string,
+  defaultValue: _propTypes.default.string,
   options: _propTypes.default.arrayOf(_propTypes.default.string),
   register: _propTypes.default.func
 };

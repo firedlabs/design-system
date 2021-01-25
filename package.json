@@ -1,6 +1,6 @@
 {
   "name": "@firedlabs/design-system",
-  "version": "0.3.27",
+  "version": "0.3.29",
   "private": false,
   "main": "dist/index.js",
   "files": [
