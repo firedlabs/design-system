@@ -10,8 +10,7 @@ function Box({
   as,
   borderColor,
   backgroundColor,
-  color,
-  onSubmit
+  color
 }) {
   const isImage = src && alt
   const isContent = !!children

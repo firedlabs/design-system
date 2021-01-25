@@ -18,7 +18,7 @@ function Text({ name, type, label, placeholder, readOnly, register }) {
 }
 
 Text.defaultProps = {
-  value: '',
+  name: '',
   type: 'text',
   label: '',
   placeholder: '',
