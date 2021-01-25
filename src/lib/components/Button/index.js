@@ -22,6 +22,7 @@ const hasSmall = ({ small }) =>
   `
 
 const Button = styled.button`
+  display: inline-block;
   background-color: var(--color-first);
   ${Title};
   padding: var(--gap-medium);
