@@ -7,7 +7,7 @@ function Select({ name, label, options, register }) {
   return (
     <Label>
       <Content>{label}</Content>
-      <SelectStyle name={name} ref={register}>
+      <SelectStyle name={name} ref={register()}>
         {options.map((option) => (
           <Option key={option} value={option}>
             {option}
