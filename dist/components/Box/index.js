@@ -21,8 +21,7 @@ function Box(_ref) {
       as = _ref.as,
       borderColor = _ref.borderColor,
       backgroundColor = _ref.backgroundColor,
-      color = _ref.color,
-      onSubmit = _ref.onSubmit;
+      color = _ref.color;
   var isImage = src && alt;
   var isContent = !!children;
 

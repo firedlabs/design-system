@@ -30,7 +30,7 @@ function Text(_ref) {
 }
 
 Text.defaultProps = {
-  value: '',
+  name: '',
   type: 'text',
   label: '',
   placeholder: '',
