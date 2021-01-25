@@ -3,11 +3,20 @@ import PropTypes from 'prop-types'
 import { Content, Label } from '../styles'
 import { TextareaStyles } from './styles'
 
-function Textarea({ value, label, placeholder, readOnly, onChange, register }) {
+function Textarea({
+  value,
+  name,
+  label,
+  placeholder,
+  readOnly,
+  onChange,
+  register
+}) {
   return (
     <Label>
       <Content>{label}</Content>
       <TextareaStyles
+        name={name}
         value={value}
         placeholder={placeholder}
         readOnly={readOnly}
