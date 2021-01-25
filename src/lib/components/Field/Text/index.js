@@ -2,7 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Label, Content, Input } from '../styles'
 
-function Text({ value, type, label, placeholder, readOnly, onChange }) {
+function Text({
+  value,
+  type,
+  label,
+  placeholder,
+  readOnly,
+  onChange,
+  register
+}) {
   return (
     <Label>
       <Content>{label}</Content>
@@ -11,6 +19,8 @@ function Text({ value, type, label, placeholder, readOnly, onChange }) {
         type={type}
         placeholder={placeholder}
         readOnly={readOnly}
+        onChange={onChange}
+        ref={register}
       />
     </Label>
   )
@@ -22,7 +32,8 @@ Text.defaultProps = {
   label: '',
   placeholder: '',
   readOnly: false,
-  onChange: () => {}
+  onChange: () => {},
+  register: () => {}
 }
 
 Text.propTypes = {
@@ -31,7 +42,8 @@ Text.propTypes = {
   label: PropTypes.string,
   placeholder: PropTypes.string,
   readOnly: PropTypes.bool,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  register: PropTypes.func
 }
 
 export default Text

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Content, Label } from '../styles'
 import { TextareaStyles } from './styles'
 
-function Textarea({ value, label, placeholder, readOnly, onChange }) {
+function Textarea({ value, label, placeholder, readOnly, onChange, register }) {
   return (
     <Label>
       <Content>{label}</Content>
@@ -11,6 +11,8 @@ function Textarea({ value, label, placeholder, readOnly, onChange }) {
         value={value}
         placeholder={placeholder}
         readOnly={readOnly}
+        onChange={onChange}
+        ref={register}
       >
         {value}
       </TextareaStyles>
@@ -23,7 +25,8 @@ Textarea.defaultProps = {
   label: '',
   placeholder: '',
   readOnly: false,
-  onChange: () => {}
+  onChange: () => {},
+  register: () => {}
 }
 
 Textarea.propTypes = {
@@ -31,7 +34,8 @@ Textarea.propTypes = {
   label: PropTypes.string,
   placeholder: PropTypes.string,
   readOnly: PropTypes.bool,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  register: PropTypes.func
 }
 
 export default Textarea
