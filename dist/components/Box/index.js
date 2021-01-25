@@ -21,7 +21,8 @@ function Box(_ref) {
       as = _ref.as,
       borderColor = _ref.borderColor,
       backgroundColor = _ref.backgroundColor,
-      color = _ref.color;
+      color = _ref.color,
+      onSubmit = _ref.onSubmit;
   var isImage = src && alt;
   var isContent = !!children;
 
@@ -43,7 +44,8 @@ function Box(_ref) {
     light: light,
     image: isImage,
     borderColor: borderColor,
-    backgroundColor: backgroundColor
+    backgroundColor: backgroundColor,
+    onSubmit: onSubmit
   }, hasContent() || hasImage());
 }
 
@@ -54,7 +56,8 @@ Box.defaultProps = {
   src: false,
   alt: false,
   borderColor: 'colorThird',
-  backgroundColor: 'colorBlackSecond'
+  backgroundColor: 'colorBlackSecond',
+  onSubmit: function onSubmit() {}
 };
 Box.propTypes = {
   as: _propTypes.default.string,
@@ -64,7 +67,8 @@ Box.propTypes = {
   alt: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.bool]),
   borderColor: _propTypes.default.string,
   backgroundColor: _propTypes.default.string,
-  color: _propTypes.default.string
+  color: _propTypes.default.string,
+  onSubmit: _propTypes.default.func
 };
 var _default = Box;
 exports.default = _default;

@@ -20,11 +20,14 @@ function Textarea(_ref) {
       label = _ref.label,
       placeholder = _ref.placeholder,
       readOnly = _ref.readOnly,
-      onChange = _ref.onChange;
+      onChange = _ref.onChange,
+      register = _ref.register;
   return /*#__PURE__*/_react.default.createElement(_styles.Label, null, /*#__PURE__*/_react.default.createElement(_styles.Content, null, label), /*#__PURE__*/_react.default.createElement(_styles2.TextareaStyles, {
     value: value,
     placeholder: placeholder,
-    readOnly: readOnly
+    readOnly: readOnly,
+    onChange: onChange,
+    ref: register
   }, value));
 }
 
@@ -33,14 +36,16 @@ Textarea.defaultProps = {
   label: '',
   placeholder: '',
   readOnly: false,
-  onChange: function onChange() {}
+  onChange: function onChange() {},
+  register: function register() {}
 };
 Textarea.propTypes = {
   value: _propTypes.default.string,
   label: _propTypes.default.string,
   placeholder: _propTypes.default.string,
   readOnly: _propTypes.default.bool,
-  onChange: _propTypes.default.func
+  onChange: _propTypes.default.func,
+  register: _propTypes.default.func
 };
 var _default = Textarea;
 exports.default = _default;
