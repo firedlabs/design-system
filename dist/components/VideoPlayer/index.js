@@ -39,7 +39,8 @@ function VideoPlayer(_ref) {
   var sources = _ref.sources,
       lessons = _ref.lessons,
       lessonActive = _ref.lessonActive,
-      changeLessonActive = _ref.changeLessonActive;
+      changeLessonActive = _ref.changeLessonActive,
+      box = _ref.box;
 
   var _useState = (0, _react.useState)(sources),
       _useState2 = _slicedToArray(_useState, 2),
@@ -364,7 +365,8 @@ function VideoPlayer(_ref) {
     onMouseUp: handleMouseUp,
     onMouseMove: handleMouseMove,
     onKeyUp: handleKeyUp,
-    ref: wrapper
+    ref: wrapper,
+    box: box
   }, /*#__PURE__*/_react.default.createElement(_styles.Video, {
     onClick: clickInVideo,
     ref: video,
@@ -422,6 +424,9 @@ var lesson = _propTypes.default.shape({
   videos: videos
 });
 
+VideoPlayer.defaultProps = {
+  box: false
+};
 VideoPlayer.propTypes = {
   sources: _propTypes.default.shape({
     src: _propTypes.default.string.isRequired,
@@ -429,7 +434,8 @@ VideoPlayer.propTypes = {
   }).isRequired,
   changeLessonActive: _propTypes.default.func.isRequired,
   lessons: _propTypes.default.arrayOf(lesson).isRequired,
-  lessonActive: _propTypes.default.string.isRequired
+  lessonActive: _propTypes.default.string.isRequired,
+  box: _propTypes.default.bool
 };
 var _default = VideoPlayer;
 exports.default = _default;
