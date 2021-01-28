@@ -36,7 +36,8 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function VideoPlayer(_ref) {
-  var sources = _ref.sources,
+  var poster = _ref.poster,
+      sources = _ref.sources,
       lessons = _ref.lessons,
       lessonActive = _ref.lessonActive,
       changeLessonActive = _ref.changeLessonActive,
@@ -376,7 +377,8 @@ function VideoPlayer(_ref) {
     onCanPlay: handleCanPlay,
     key: sourcesState.src,
     src: sourcesState.src,
-    type: sourcesState.type
+    type: sourcesState.type,
+    poster: poster
   }), /*#__PURE__*/_react.default.createElement(_Loading.default, {
     active: loading
   }), /*#__PURE__*/_react.default.createElement(_styles.BigPlay, {
@@ -425,6 +427,7 @@ var lesson = _propTypes.default.shape({
 });
 
 VideoPlayer.defaultProps = {
+  poster: '',
   box: false
 };
 VideoPlayer.propTypes = {
@@ -435,6 +438,7 @@ VideoPlayer.propTypes = {
   changeLessonActive: _propTypes.default.func.isRequired,
   lessons: _propTypes.default.arrayOf(lesson).isRequired,
   lessonActive: _propTypes.default.string.isRequired,
+  poster: _propTypes.default.string,
   box: _propTypes.default.bool
 };
 var _default = VideoPlayer;
