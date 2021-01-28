@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import sprite from '../../assets/images/icons.png'
 import { Cursor, BoxShadow } from '../../Styles/Tools'
 
@@ -39,6 +39,21 @@ export const Video = styled.video`
   max-height: 100%;
 `
 
+const hasBox = ({ box }) =>
+  box &&
+  css`
+    position: relative;
+    box-sizing: border-box;
+    width: 60%;
+    ${BoxShadow.medium};
+    border: 0.5rem solid var(--color-third);
+    background-color: var(--color-black-second);
+
+    & > ${Video} {
+      width: auto;
+    }
+  `
+
 export const Wrapper = styled.figure`
   position: fixed;
   left: 0;
@@ -55,4 +70,6 @@ export const Wrapper = styled.figure`
   &:hover > ${BigPlay} {
     filter: grayscale(0);
   }
+
+  ${hasBox}
 `

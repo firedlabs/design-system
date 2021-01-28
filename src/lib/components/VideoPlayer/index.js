@@ -4,7 +4,13 @@ import Loading from '../Loading'
 import Controls from './Controls'
 import { BigPlay, Video, Wrapper } from './styles'
 
-function VideoPlayer({ sources, lessons, lessonActive, changeLessonActive }) {
+function VideoPlayer({
+  sources,
+  lessons,
+  lessonActive,
+  changeLessonActive,
+  box
+}) {
   const [sourcesState, setSourcesState] = useState(sources)
   const [showControls, setShowControls] = useState(false)
   const [outControls, setOutControls] = useState(true)
@@ -235,6 +241,7 @@ function VideoPlayer({ sources, lessons, lessonActive, changeLessonActive }) {
       onMouseMove={handleMouseMove}
       onKeyUp={handleKeyUp}
       ref={wrapper}
+      box={box}
     >
       <Video
         onClick={clickInVideo}
@@ -297,6 +304,10 @@ const lesson = PropTypes.shape({
   videos
 })
 
+VideoPlayer.defaultProps = {
+  box: false
+}
+
 VideoPlayer.propTypes = {
   sources: PropTypes.shape({
     src: PropTypes.string.isRequired,
@@ -304,7 +315,8 @@ VideoPlayer.propTypes = {
   }).isRequired,
   changeLessonActive: PropTypes.func.isRequired,
   lessons: PropTypes.arrayOf(lesson).isRequired,
-  lessonActive: PropTypes.string.isRequired
+  lessonActive: PropTypes.string.isRequired,
+  box: PropTypes.bool
 }
 
 export default VideoPlayer

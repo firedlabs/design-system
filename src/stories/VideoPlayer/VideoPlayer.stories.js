@@ -19,6 +19,18 @@ Default.args = {
     'https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217'
 }
 
+export const InBox = Template.bind({})
+InBox.args = {
+  box: true,
+  sources: {
+    src:
+      'https://player.vimeo.com/external/504737839.hd.mp4?s=8212099bc1a53dcbc4e184f0dd787e4dce2f4f44&profile_id=169',
+    type: 'video/mp4'
+  },
+  poster:
+    'https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217'
+}
+
 export const WithPlaylist = Template.bind({})
 WithPlaylist.args = {
   sources: {
