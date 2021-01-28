@@ -5,6 +5,7 @@ import Controls from './Controls'
 import { BigPlay, Video, Wrapper } from './styles'
 
 function VideoPlayer({
+  poster,
   sources,
   lessons,
   lessonActive,
@@ -253,6 +254,7 @@ function VideoPlayer({
         key={sourcesState.src}
         src={sourcesState.src}
         type={sourcesState.type}
+        poster={poster}
       />
 
       <Loading active={loading} />
@@ -305,6 +307,7 @@ const lesson = PropTypes.shape({
 })
 
 VideoPlayer.defaultProps = {
+  poster: '',
   box: false
 }
 
@@ -316,6 +319,7 @@ VideoPlayer.propTypes = {
   changeLessonActive: PropTypes.func.isRequired,
   lessons: PropTypes.arrayOf(lesson).isRequired,
   lessonActive: PropTypes.string.isRequired,
+  poster: PropTypes.string,
   box: PropTypes.bool
 }
 
