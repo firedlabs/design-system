@@ -30,7 +30,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    position: relative;\n    box-sizing: border-box;\n    width: 60%;\n    ", ";\n    border: 0.5rem solid var(--color-third);\n    background-color: var(--color-black-second);\n\n    & > ", " {\n      width: auto;\n    }\n  "]);
+  var data = _taggedTemplateLiteral(["\n    position: relative;\n    box-sizing: border-box;\n    width: 100%;\n    ", ";\n    border: 0.5rem solid var(--color-third);\n    background-color: var(--color-black-second);\n\n    & > ", " {\n      width: auto;\n    }\n  "]);
 
   _templateObject4 = function _templateObject4() {
     return data;
