@@ -6,7 +6,7 @@ import ListActionImageStyle from './styles'
 function ListActionImage({ items, size }) {
   return (
     <ListActionImageStyle>
-      {items.map(({ href, src, alt, isPadding, backgroundColor }) => (
+      {items.map(({ href, src, alt, isPadding, backgroundColor, target }) => (
         <ActionImage
           key={href}
           src={src}
@@ -15,6 +15,7 @@ function ListActionImage({ items, size }) {
           size={size}
           isPadding={isPadding}
           backgroundColor={backgroundColor}
+          target={target}
         />
       ))}
     </ListActionImageStyle>
