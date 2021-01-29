@@ -31,7 +31,7 @@ export const IconPlayer = styled.span`
 `
 
 export const IconPlayerWrapper = styled.div`
-  --wh: 1.6rem;
+  --wh: 16px;
   --scale: 2;
   position: relative;
   width: calc(var(--wh) * var(--scale));

@@ -23,7 +23,7 @@ export const Right = styled.div`
 `
 
 export const ControlsStyle = styled.menu`
-  --height-controls: 5rem;
+  --height-controls: 50px;
   display: flex;
   box-sizing: border-box;
   padding-left: var(--gap-small);
