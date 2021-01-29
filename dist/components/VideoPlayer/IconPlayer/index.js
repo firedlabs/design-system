@@ -14,7 +14,7 @@ var _Tools = require("../../../Styles/Tools");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  --wh: 1.6rem;\n  --scale: 2;\n  position: relative;\n  width: calc(var(--wh) * var(--scale));\n  height: calc(var(--wh) * var(--scale));\n  transform-origin: center center;\n  transition: transform 100ms linear;\n\n  &:hover,\n  &:focus {\n    transform: scale(1.2);\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  --wh: 16px;\n  --scale: 2;\n  position: relative;\n  width: calc(var(--wh) * var(--scale));\n  height: calc(var(--wh) * var(--scale));\n  transform-origin: center center;\n  transition: transform 100ms linear;\n\n  &:hover,\n  &:focus {\n    transform: scale(1.2);\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
