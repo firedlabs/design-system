@@ -23,7 +23,8 @@ function ListActionImage(_ref) {
         src = _ref2.src,
         alt = _ref2.alt,
         isPadding = _ref2.isPadding,
-        backgroundColor = _ref2.backgroundColor;
+        backgroundColor = _ref2.backgroundColor,
+        target = _ref2.target;
     return /*#__PURE__*/_react.default.createElement(_ActionImage.default, {
       key: href,
       src: src,
@@ -31,7 +32,8 @@ function ListActionImage(_ref) {
       href: href,
       size: size,
       isPadding: isPadding,
-      backgroundColor: backgroundColor
+      backgroundColor: backgroundColor,
+      target: target
     });
   }));
 }
