@@ -16,7 +16,7 @@ var _palette = require("../../../Styles/Settings/Colors/palette");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  ", ";\n  text-align: center;\n  color: var(--color-third);\n  background-color: ", ";\n  padding: calc(var(--gap-smallest) / 2);\n"]);
+  var data = _taggedTemplateLiteral(["\n  ", ";\n  text-align: center;\n  color: var(--color-third);\n  background-color: ", ";\n  padding: calc(var(--gap-smallest) / 2);\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n"]);
 
   _templateObject = function _templateObject() {
     return data;
