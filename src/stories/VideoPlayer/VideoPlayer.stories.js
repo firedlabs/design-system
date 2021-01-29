@@ -1,5 +1,6 @@
 import React from 'react'
 import { VideoPlayer } from '../../lib'
+import Wrapper from '../components/Wrapper'
 
 export default {
   title: 'Components/VideoPlayer/Default',
@@ -19,7 +20,7 @@ Default.args = {
     'https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217'
 }
 
-export const InBox = Template.bind({})
+export const InBox = (args) => <Wrapper>{Template.bind({})(args)}</Wrapper>
 InBox.args = {
   box: true,
   sources: {

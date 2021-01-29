@@ -44,7 +44,7 @@ const hasBox = ({ box }) =>
   css`
     position: relative;
     box-sizing: border-box;
-    width: 60%;
+    width: 100%;
     ${BoxShadow.medium};
     border: 0.5rem solid var(--color-third);
     background-color: var(--color-black-second);
