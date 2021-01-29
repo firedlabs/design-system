@@ -7,6 +7,7 @@ function ActionImage({
   href,
   src,
   alt,
+  target,
   backgroundColor,
   size,
   isPadding,
@@ -23,6 +24,7 @@ function ActionImage({
       boxShadow={boxShadow}
       as={as}
       to={to}
+      target={target}
     >
       <Image src={src} alt={alt} />
     </ActionImageStyle>
@@ -36,7 +38,8 @@ ActionImage.defaultProps = {
   isPadding: true,
   boxShadow: false,
   as: 'a',
-  to: ''
+  to: '',
+  target: '_self'
 }
 
 ActionImage.propTypes = {
@@ -48,7 +51,8 @@ ActionImage.propTypes = {
   size: PropTypes.string,
   boxShadow: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   as: PropTypes.string,
-  to: PropTypes.string
+  to: PropTypes.string,
+  target: PropTypes.string
 }
 
 export default ActionImage
