@@ -158,6 +158,12 @@ function VideoPlayer(_ref) {
       return clearTimeout(timer);
     };
   }, [showControls, outControls]);
+  (0, _react.useEffect)(function () {
+    video.current.playbackRate = velocityActive;
+    video.current.volume = volume / 100;
+    video.current.muted = mute;
+    setPlay(false);
+  }, [sourcesState]);
 
   var changeMute = function changeMute(muteParam) {
     video.current.muted = muteParam;
@@ -286,9 +292,6 @@ function VideoPlayer(_ref) {
   var changeVideo = function changeVideo(event) {
     var src = event.currentTarget.getAttribute('id');
     var type = event.currentTarget.getAttribute('data-type');
-    video.current.playbackRate = velocityActive;
-    video.current.volume = volume / 100;
-    video.current.muted = mute;
     setSourcesState({
       src: src,
       type: type
