@@ -24,5 +24,9 @@ const Template = (args) => <Form {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-  children
+  children,
+  small: false,
+  medium: false,
+  big: false,
+  biggest: false
 }
