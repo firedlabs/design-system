@@ -135,12 +135,15 @@ function VideoPlayer(_ref) {
     }
   });
   (0, _react.useEffect)(function () {
-    var _localStorage$getItem;
+    var _localStorage$getItem, _localStorage$getItem2;
 
     var volumeStorage = (_localStorage$getItem = localStorage.getItem('volume')) !== null && _localStorage$getItem !== void 0 ? _localStorage$getItem : 100;
+    var playbackRate = (_localStorage$getItem2 = localStorage.getItem('playbackRate')) !== null && _localStorage$getItem2 !== void 0 ? _localStorage$getItem2 : '1';
     setVolume(volumeStorage);
     video.current.volume = volumeStorage / 100;
     video.current.focus();
+    setVelocityActive(playbackRate);
+    video.current.playbackRate = playbackRate;
   }, []);
   (0, _react.useEffect)(function () {
     var timer = setTimeout(function () {
@@ -248,6 +251,7 @@ function VideoPlayer(_ref) {
   var changeActiveVelocity = function changeActiveVelocity(_ref4) {
     var target = _ref4.target;
     var playbackRate = target.textContent;
+    localStorage.setItem('playbackRate', playbackRate);
     setShowVelocity(false);
     setVelocityActive(playbackRate);
     video.current.playbackRate = playbackRate;
