@@ -170,6 +170,9 @@ function VideoPlayer({
   const changeVideo = (event) => {
     const src = event.currentTarget.getAttribute('id')
     const type = event.currentTarget.getAttribute('data-type')
+    video.current.playbackRate = velocityActive
+    video.current.volume = volume / 100
+    video.current.muted = mute
 
     setSourcesState({
       src,
