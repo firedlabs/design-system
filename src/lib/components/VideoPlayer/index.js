@@ -44,9 +44,12 @@ function VideoPlayer({
 
   useEffect(() => {
     const volumeStorage = localStorage.getItem('volume') ?? 100
+    const playbackRate = localStorage.getItem('playbackRate') ?? '1'
     setVolume(volumeStorage)
     video.current.volume = volumeStorage / 100
     video.current.focus()
+    setVelocityActive(playbackRate)
+    video.current.playbackRate = playbackRate
   }, [])
 
   useEffect(() => {
@@ -147,6 +150,7 @@ function VideoPlayer({
 
   const changeActiveVelocity = ({ target }) => {
     const playbackRate = target.textContent
+    localStorage.setItem('playbackRate', playbackRate)
     setShowVelocity(false)
     setVelocityActive(playbackRate)
     video.current.playbackRate = playbackRate
