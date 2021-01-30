@@ -65,6 +65,13 @@ function VideoPlayer({
     return () => clearTimeout(timer)
   }, [showControls, outControls])
 
+  useEffect(() => {
+    video.current.playbackRate = velocityActive
+    video.current.volume = volume / 100
+    video.current.muted = mute
+    setPlay(false)
+  }, [sourcesState])
+
   const changeMute = (muteParam) => {
     video.current.muted = muteParam
     setMute(muteParam)
@@ -170,9 +177,6 @@ function VideoPlayer({
   const changeVideo = (event) => {
     const src = event.currentTarget.getAttribute('id')
     const type = event.currentTarget.getAttribute('data-type')
-    video.current.playbackRate = velocityActive
-    video.current.volume = volume / 100
-    video.current.muted = mute
 
     setSourcesState({
       src,

@@ -125,5 +125,5 @@ WithPlaylist.args = {
       ]
     }
   ],
-  lessonActive: 'Módulo 01'
+  lessonActive: 'Módulo 00'
 }
