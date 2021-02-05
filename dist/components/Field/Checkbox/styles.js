@@ -15,8 +15,18 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function _templateObject6() {
+function _templateObject7() {
   var data = _taggedTemplateLiteral(["\n        transform: translateY(20px);\n      "]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n        transform: rotate(-45deg) translate(34px, -30px);\n        opacity: 1;\n        border-color: var(--color-success);\n      "]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -26,7 +36,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n        transform: rotate(-45deg) translate(34px, -30px);\n        opacity: 1;\n        border-color: var(--color-success);\n      "]);
+  var data = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  width: 200px;\n  height: 200px;\n  padding: var(--gap-medium);\n  background-color: var(--color-fourth);\n  border: 5px solid var(--color-third);\n  ", ";\n  transition: transform 100ms linear;\n  transform: ", ";\n\n  &:hover {\n    transform-origin: center;\n    transform: scale(1.07);\n  }\n\n  & > ", " {\n    ", "\n  }\n\n  & > ", " {\n    ", "\n  }\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -36,7 +46,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  width: 200px;\n  height: 200px;\n  padding: var(--gap-medium);\n  background-color: var(--color-fourth);\n  border: 5px solid var(--color-third);\n  ", ";\n  transition: transform 100ms linear;\n  transform: ", ";\n\n  &:hover {\n    transform-origin: center;\n    transform: scale(1.07);\n  }\n\n  & > ", " {\n    ", "\n  }\n\n  & > ", " {\n    ", "\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  ", ";\n  position: relative;\n  color: var(--color-third);\n  text-align: center;\n  transition: transform 100ms ease-in-out;\n\n  ", "\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -46,7 +56,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  ", ";\n  position: relative;\n  color: var(--color-third);\n  text-align: center;\n  transition: transform 100ms ease-in-out;\n"]);
+  var data = _taggedTemplateLiteral(["\n    ", "\n  "]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -87,19 +97,24 @@ var Icon = _styledComponents.default.span(_templateObject2());
 
 exports.Icon = Icon;
 
-var Content = _styledComponents.default.span(_templateObject3(), _Tools.Body1);
+var hasSmall = function hasSmall(_ref) {
+  var small = _ref.small;
+  return small && (0, _styledComponents.css)(_templateObject3(), _Tools.Body2);
+};
+
+var Content = _styledComponents.default.span(_templateObject4(), _Tools.Body1, hasSmall);
 
 exports.Content = Content;
 
-var CheckboxStyle = _styledComponents.default.label(_templateObject4(), _Tools.Cursor.hover, function (_ref) {
-  var active = _ref.active;
-  return active && 'scale(0.95)';
-}, Icon, function (_ref2) {
+var CheckboxStyle = _styledComponents.default.label(_templateObject5(), _Tools.Cursor.hover, function (_ref2) {
   var active = _ref2.active;
-  return active && (0, _styledComponents.css)(_templateObject5());
-}, Content, function (_ref3) {
+  return active && 'scale(0.95)';
+}, Icon, function (_ref3) {
   var active = _ref3.active;
   return active && (0, _styledComponents.css)(_templateObject6());
+}, Content, function (_ref4) {
+  var active = _ref4.active;
+  return active && (0, _styledComponents.css)(_templateObject7());
 });
 
 exports.CheckboxStyle = CheckboxStyle;

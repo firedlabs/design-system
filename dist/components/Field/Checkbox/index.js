@@ -19,7 +19,8 @@ function Checkbox(_ref) {
       name = _ref.name,
       register = _ref.register,
       value = _ref.value,
-      onClick = _ref.onClick;
+      onClick = _ref.onClick,
+      small = _ref.small;
   return /*#__PURE__*/_react.default.createElement(_styles.CheckboxStyle, {
     active: active,
     onClick: onClick
@@ -28,13 +29,16 @@ function Checkbox(_ref) {
     name: name,
     value: value,
     defaultChecked: active
-  }), /*#__PURE__*/_react.default.createElement(_styles.Icon, null), /*#__PURE__*/_react.default.createElement(_styles.Content, null, children));
+  }), /*#__PURE__*/_react.default.createElement(_styles.Icon, null), /*#__PURE__*/_react.default.createElement(_styles.Content, {
+    small: small
+  }, children));
 }
 
 Checkbox.defaultProps = {
   active: false,
   onClick: function onClick() {},
-  value: ''
+  value: '',
+  small: false
 };
 Checkbox.propTypes = {
   children: _propTypes.default.string.isRequired,
@@ -42,7 +46,8 @@ Checkbox.propTypes = {
   register: _propTypes.default.func.isRequired,
   value: _propTypes.default.string,
   onClick: _propTypes.default.func,
-  active: _propTypes.default.bool
+  active: _propTypes.default.bool,
+  small: _propTypes.default.bool
 };
 var _default = Checkbox;
 exports.default = _default;
