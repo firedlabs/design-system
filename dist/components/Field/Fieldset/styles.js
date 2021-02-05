@@ -14,7 +14,7 @@ var _styles = require("../Checkbox/styles");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  border: 0.5rem dashed var(--color-third);\n  padding-top: var(--gap-medium);\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  border: 0.5rem dashed var(--color-third);\n  padding-top: var(--gap-medium);\n  margin-bottom: var(--gap-small);\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
