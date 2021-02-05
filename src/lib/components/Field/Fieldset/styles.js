@@ -24,4 +24,5 @@ export const FieldsetStyle = styled.fieldset`
   flex-direction: column;
   border: 0.5rem dashed var(--color-third);
   padding-top: var(--gap-medium);
+  margin-bottom: var(--gap-small);
 `
