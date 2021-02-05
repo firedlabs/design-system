@@ -2,12 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Check, CheckboxStyle, Content, Icon } from './styles'
 
-function Checkbox({ children, active, name, register, value, onClick }) {
+function Checkbox({ children, active, name, register, value, onClick, small }) {
   return (
     <CheckboxStyle active={active} onClick={onClick}>
       <Check ref={register} name={name} value={value} defaultChecked={active} />
       <Icon />
-      <Content>{children}</Content>
+      <Content small={small}>{children}</Content>
     </CheckboxStyle>
   )
 }
@@ -15,7 +15,8 @@ function Checkbox({ children, active, name, register, value, onClick }) {
 Checkbox.defaultProps = {
   active: false,
   onClick: () => {},
-  value: ''
+  value: '',
+  small: false
 }
 
 Checkbox.propTypes = {
@@ -24,7 +25,8 @@ Checkbox.propTypes = {
   register: PropTypes.func.isRequired,
   value: PropTypes.string,
   onClick: PropTypes.func,
-  active: PropTypes.bool
+  active: PropTypes.bool,
+  small: PropTypes.bool
 }
 
 export default Checkbox

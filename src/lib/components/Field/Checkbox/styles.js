@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { Body1, Cursor } from '../../../Styles/Tools'
+import { Body1, Body2, Cursor } from '../../../Styles/Tools'
 
 export const Check = styled.input.attrs({ type: 'checkbox' })`
   display: none;
@@ -20,12 +20,20 @@ export const Icon = styled.span`
   opacity: 0;
 `
 
+const hasSmall = ({ small }) =>
+  small &&
+  css`
+    ${Body2}
+  `
+
 export const Content = styled.span`
   ${Body1};
   position: relative;
   color: var(--color-third);
   text-align: center;
   transition: transform 100ms ease-in-out;
+
+  ${hasSmall}
 `
 
 export const CheckboxStyle = styled.label`
