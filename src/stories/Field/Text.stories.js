@@ -16,6 +16,5 @@ Default.args = {
   label: 'Login',
   placeholder: 'Seu nick aqui',
   type: 'text',
-  value: 'marcobrunodev',
   readOnly: false
 }

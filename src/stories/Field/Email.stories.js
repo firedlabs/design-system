@@ -22,6 +22,5 @@ export const ReadOnly = Template.bind({})
 ReadOnly.args = {
   label: 'Email',
   placeholder: 'seu_email@gmail.com',
-  value: 'marco.bruno.br@gmail.com',
   readOnly: true
 }
