@@ -28,7 +28,18 @@ Default.args = {
   backgroundColor: 'colorFirst',
   color: 'colorThird',
   medium: false,
-  small: false
+  small: false,
+  loading: false
+}
+
+export const Loading = Template.bind({})
+Loading.args = {
+  children: 'Matrícula 100% free',
+  backgroundColor: 'colorFirst',
+  color: 'colorThird',
+  medium: false,
+  small: false,
+  loading: true
 }
 
 export const Medium = Template.bind({})
@@ -37,7 +48,8 @@ Medium.args = {
   backgroundColor: 'colorFirst',
   color: 'colorThird',
   medium: true,
-  small: false
+  small: false,
+  loading: false
 }
 
 export const Small = Template.bind({})
@@ -46,5 +58,6 @@ Small.args = {
   backgroundColor: 'colorFirst',
   color: 'colorThird',
   medium: false,
-  small: true
+  small: true,
+  loading: false
 }
