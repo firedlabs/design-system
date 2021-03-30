@@ -62,6 +62,7 @@ const Button = styled.button`
   ${BoxShadow.small};
   text-decoration: none;
   text-align: center;
+  position: relative;
 
   &:hover {
     transform: translateY(calc(var(--gap-smallest) / -2)) scale(1.03);
