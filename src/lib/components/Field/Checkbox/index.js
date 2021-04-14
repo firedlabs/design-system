@@ -5,7 +5,12 @@ import { Check, CheckboxStyle, Content, Icon } from './styles'
 function Checkbox({ children, active, name, register, value, onClick, small }) {
   return (
     <CheckboxStyle active={active} onClick={onClick}>
-      <Check ref={register} name={name} value={value} defaultChecked={active} />
+      <Check
+        ref={register(name)}
+        name={name}
+        value={value}
+        defaultChecked={active}
+      />
       <Icon />
       <Content small={small}>{children}</Content>
     </CheckboxStyle>

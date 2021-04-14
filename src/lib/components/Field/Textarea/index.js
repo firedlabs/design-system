@@ -11,7 +11,7 @@ function Textarea({ name, label, placeholder, readOnly, register }) {
         name={name}
         placeholder={placeholder}
         readOnly={readOnly}
-        ref={register()}
+        ref={register(name)}
       />
     </Label>
   )
