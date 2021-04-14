@@ -26,7 +26,7 @@ function Select(_ref) {
   return /*#__PURE__*/_react.default.createElement(_styles.Label, null, /*#__PURE__*/_react.default.createElement(_styles.Content, null, label), /*#__PURE__*/_react.default.createElement(_styles2.SelectStyle, {
     name: name,
     onChange: onChange,
-    ref: register(),
+    ref: register(name),
     value: value || defaultValue
   }, options.map(function (option) {
     return /*#__PURE__*/_react.default.createElement(_styles2.Option, {

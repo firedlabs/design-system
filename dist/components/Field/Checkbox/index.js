@@ -25,7 +25,7 @@ function Checkbox(_ref) {
     active: active,
     onClick: onClick
   }, /*#__PURE__*/_react.default.createElement(_styles.Check, {
-    ref: register,
+    ref: register(name),
     name: name,
     value: value,
     defaultChecked: active

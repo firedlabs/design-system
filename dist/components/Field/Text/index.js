@@ -25,7 +25,7 @@ function Text(_ref) {
     type: type,
     placeholder: placeholder,
     readOnly: readOnly,
-    ref: register()
+    ref: register(name)
   }));
 }
 

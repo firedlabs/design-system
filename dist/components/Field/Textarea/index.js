@@ -25,7 +25,7 @@ function Textarea(_ref) {
     name: name,
     placeholder: placeholder,
     readOnly: readOnly,
-    ref: register()
+    ref: register(name)
   }));
 }
 
