@@ -6,7 +6,7 @@ function Checkbox({ children, active, name, register, value, onClick, small }) {
   return (
     <CheckboxStyle active={active} onClick={onClick}>
       <Check
-        ref={register(name)}
+        {...register(name)}
         name={name}
         value={value}
         defaultChecked={active}

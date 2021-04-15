@@ -18,7 +18,7 @@ function Select({
       <SelectStyle
         name={name}
         onChange={onChange}
-        ref={register(name)}
+        {...register(name)}
         value={value || defaultValue}
       >
         {options.map((option) => (

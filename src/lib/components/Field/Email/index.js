@@ -11,7 +11,7 @@ function Email({ name, label, placeholder, readOnly, register }) {
         name={name}
         placeholder={placeholder}
         readOnly={readOnly}
-        ref={register(name)}
+        {...register(name)}
       />
     </Label>
   )
