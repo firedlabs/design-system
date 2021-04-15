@@ -11,7 +11,7 @@ function Text({ name, type, label, placeholder, readOnly, register }) {
         type={type}
         placeholder={placeholder}
         readOnly={readOnly}
-        ref={register(name)}
+        {...register(name)}
       />
     </Label>
   )
